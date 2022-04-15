@@ -114,7 +114,7 @@
     }
   }
   
-  @media only screen and (max-width: 515px) {
+  @media only screen and (max-width: 620px) {
     /* Nav */
     .nav-bar .RightSide .nav-link {
       display: none;
@@ -123,32 +123,29 @@
       padding-left: 25px;
     }
     .nav-bar .LeftSide a {
-      font-size: 18px;
+      font-size: 24px;
     }
     .nav-bar .RightSide {
       padding: 25px;
     }
-  
     button {
       display: flex;
       padding: 25px 20px;
       background-color: hsla(38, 22%, 90%, 0);
-      background-image: url('../assets/ryan.jpg');
+      background-image: url('../assets/ryan.png');
       background-repeat: no-repeat, repeat;
       background-position: center; /* Center the image */
       border: none;
       border-radius: 5px;
     } 
   
-    
-  
     .nav-bar .RightSide #hidden {
       position: absolute;
       left: 0px;
       top: 4em;
-      height: 200px;
+      height: 300px;
       width: 100%;
-      background-color: #111;
+      background-color: #134E15;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -156,42 +153,7 @@
     .nav-bar .RightSide #hidden a {
       margin-top: 2.5em;
       font-size: 16px;
+      color: #FFF;
     }
   
-  
-  /* Footer */
-    .Footer {
-      height: auto;
-      flex-direction: column;
-      align-items: center;
-    }
-    .Footer .LeftSide-footer {
-      justify-content: center;
-      padding-left: 0px;
-      padding-top: 1em;
-    }
-    .Footer .RightSide-footer {
-      justify-content: center;
-      padding-right: 0px;
-      padding-bottom: 2em;
-    }
-    .Footer .Middle-footer {
-      padding: 1em;
-    }
-    .Footer .Middle-footer .Links a {
-      display: flex;
-      padding: 4px;
-      flex-direction: column;
-      text-align: center;
-    }
-    .Footer .LeftSide-footer a {
-      font-size: 24px;
-    }
-    .icon{
-      font-size: 24px;
-      margin: 10px;
-    }
-   
-  }
-  
-  
+}
