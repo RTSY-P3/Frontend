@@ -1,6 +1,10 @@
 # **Codr.**
 
-## Group 3 Project
+#### Group 3 Project
+
+## <img src="./readme_img/Group photo.png" width="200">
+
+---
 
 #### Tiffany Pereira| [GITHUB](https://github.com/tiffpereira) | [LINKEDIN](https://www.linkedin.com/in/tiffanympereira/)
 
@@ -9,8 +13,6 @@
 #### Yusong Shi | [GITHUB](https://github.com/yusongsh) | [LINKEDIN](https://www.linkedin.com/in/yusong-sh/)
 
 #### Ryan Ditzel | [GITHUB](https://github.com/ryanditzel) | [LINKEDIN](https://www.linkedin.com/in/ryanditzel/)
-
----
 
 ## Technologies Used:
 
