@@ -1,17 +1,26 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import '../styles/nav.css'
 
 const Nav = () => {
 
-    return (
-        <div className='nav-bar'>
-            <div className='nav-links'>
-                <Link className='home-link' to='/'>Home</Link>
-                <Link className='home-link' to=''>Feature</Link>
-                <Link className='home-link' to=''>Resources</Link>
-                <Link className='home-link' to=''>Sign Up</Link>
-                <Link className='home-link' to=''>Log In</Link>
-            </div>
+    const [ showLinks, setShowLinks ] = useState(false)
+return (
+
+    <div className='nav-bar'>
+        <div className='LeftSide'>
+            <Link to='/'>Codr.</Link>
         </div>
+        <div className='RightSide'>
+            <div className='nav-link' id={showLinks ? 'hidden' : ''}>
+                <Link to=''>Credit</Link>
+                <Link to=''>Resources</Link>
+                <Link to=''>Sign Up</Link>       
+                <Link to=''>Log In</Link>
+            </div>
+            <button onClick={() => setShowLinks(!showLinks) }></button>
+        </div>
+    </div>
     )
 }
 
