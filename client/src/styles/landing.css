@@ -1,0 +1,24 @@
+.landing-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 60px;
+}
+
+.landing-image {
+    background-image:url('../assets/LandingImage/LandingImage.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    display: flex;
+    width: 45vw;
+    height: 80vh;
+    margin: 0 80px 80px 80px;
+}
+
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+}
