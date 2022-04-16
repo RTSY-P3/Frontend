@@ -57,6 +57,7 @@
     font-style: normal;
   }
   
+
   
   
   
@@ -132,7 +133,7 @@
       display: flex;
       padding: 25px 20px;
       background-color: hsla(38, 22%, 90%, 0);
-      background-image: url('../assets/ryan.png');
+      background-image: url('../assets/MenuBarImage/ryan.png');
       background-repeat: no-repeat, repeat;
       background-position: center; /* Center the image */
       border: none;
