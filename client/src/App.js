@@ -3,7 +3,7 @@ import './styles/App.css'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
-//import Footer from './components/Footer'
+import Footer from './components/Footer'
 import Landing from './pages/Landing'
 import Credits from './pages/Credits'
 import Feed from './pages/Feed'
@@ -27,6 +27,9 @@ const App = () => {
           <Route path='credits' element={<Credits />}/>
         </Routes>
        </main> 
+       <footer>
+         <Footer />
+       </footer>
     </div>
   );
 }
