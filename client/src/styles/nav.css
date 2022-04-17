@@ -80,43 +80,27 @@ background-color: #FFF;
 color: #134E15 !important;
 } 
   
+
   /* Media query for navbar */
-  @media only screen and (max-width: 870px) {
+  @media only screen and (max-width: 1150px) {
+    .nav-bar .LeftSide {
+      flex: 20%;
+    }
+    .nav-bar .RightSide {
+      flex: 80%;
+    }
     .nav-bar .RightSide .nav-link a {
       font-size: 14px;
     }
     .nav-bar .RightSide {
-      padding-right: 25px;
+      padding-right: 10px;
     }
-  
-    .Footer .Middle-footer .nav-link a {
-       margin: 0 .5em;
+     .nav-link a {
+      margin:0;
       font-size: 12px;
     }
     .nav-bar.RightSide .nav-link a {
-      margin: 0 .5em;
-    }
-  }
-  
-  /* Screen Size for Footer */
-  @media only screen and (max-width: 725px) {
-    .Footer {
-      height: auto;
-      flex-direction: column;
-      align-items: center;
-    }
-    .Footer .LeftSide-footer {
-      justify-content: center;
-      padding-left: 0px;
-      padding-top: 1em;
-    }
-    .Footer .RightSide-footer {
-      justify-content: center;
-      padding-right: 0px;
-      padding-bottom: 2em;
-    }
-    .Footer .Middle-footer {
-      padding: 1em;
+      margin: 0;
     }
   }
   
