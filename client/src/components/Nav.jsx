@@ -13,12 +13,12 @@ return (
         </div>
         <div className='RightSide'>
             <div className='nav-link' id={showLinks ? 'hidden' : ''}>
-                <Link to=''>Credit</Link>
+                <Link to='/credit'>Credit</Link>
                 <Link to=''>Resources</Link>
-                <Link to=''>Sign Up</Link>       
-                <Link to=''>Log In</Link>
+                <Link className='signup' to=''>Sign Up</Link>       
+                <Link className='signin' to=''>Log In</Link>
             </div>
-            <button onClick={() => setShowLinks(!showLinks) }></button>
+            <button className='navbutton' onClick={() => setShowLinks(!showLinks) }></button>
         </div>
     </div>
     )
