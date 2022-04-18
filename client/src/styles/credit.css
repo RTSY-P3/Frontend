@@ -1,0 +1,86 @@
+.credits-page-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.hero-h1{
+    font-size: 36px;
+    color:#134E15;
+}
+
+.hero-p {
+    margin: 40px 0;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+
+.section-image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.section-image {
+    width: 500px;
+    height: 500px;
+    margin-bottom: 20px;
+    background-size: cover;
+}
+.image1 {
+    background-image: url('../assets/LandingImage/Group\ photo.png');
+}
+
+
+
+.section-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-top: 2px solid #134E15;
+    margin-bottom: 100px;
+}
+
+
+.section-title {
+    margin: 40px 0;
+    font-size: 18px;
+    line-height: 28px;
+    font-size: 36px;
+    color:#134E15;
+}
+
+
+.profile {
+    margin: 40px;
+    text-align: center;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.profile-1 {
+    background-image: url(../assets/creditImage/tiff.jpeg);
+}
+.profile-2 {
+    background-image: url(../assets/creditImage/ryan.jpeg);
+}
+.profile-3 {
+    background-image: url(../assets/creditImage/steve.jpeg);
+}
+.profile-4 {
+    background-image: url(../assets/creditImage/yusong.jpeg);  
+}

@@ -20,11 +20,11 @@ const App = () => {
        <main className="Routes"> 
          <Routes>
           <Route path='/' element={<Landing />}/>
-          <Route path='feed' element={<Feed />}/>
-          <Route path='myprofile' element={<MyProfile />}/>
-          <Route path='register' element={<Register />}/>
-          <Route path='signin' element={<SignIn />}/>
-          <Route path='credits' element={<Credits />}/>
+          <Route path='/feed' element={<Feed />}/>
+          <Route path='/myprofile' element={<MyProfile />}/>
+          <Route path='/register' element={<Register />}/>
+          <Route path='/signin' element={<SignIn />}/>
+          <Route path='/credits' element={<Credits />}/>
         </Routes>
        </main> 
        <footer>
