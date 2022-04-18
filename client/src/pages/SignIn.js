@@ -1,12 +1,48 @@
-import React from "react"
+import React, { useState } from "react";
 
 const SignIn = () => {
+  const [formValues, setFormValues] = useState({ email: "", password: "" });
 
-    return (
-        <div className="sign-in-page">
-            plz sign in ty
-        </div>
-    )
-}
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
 
-export default SignIn
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  };
+
+  return (
+    <div className="sign-in-page">
+      <div className="card-overlay centered">
+        <form className="col" onSubmit={handleSubmit}>
+          <div className="input-wrapper">
+            <label htmlFor="email">Email</label>
+            <input
+              onChange={handleChange}
+              name="email"
+              type="email"
+              placeholder="example@example.com"
+              value={formValues.email}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="password">Password</label>
+            <input
+              onChange={handleChange}
+              type="password"
+              name="password"
+              value={formValues.password}
+              required
+            />
+          </div>
+          <button disabled={!formValues.email || !formValues.password}>
+            Sign In
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default SignIn;
