@@ -1,21 +1,29 @@
-import React from 'react'
-//import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { GetPosts } from '../services/PostServices'
 
-const Feed = (props) => {
-    // let navigate = useNavigate()
+const Feed = () => {
+    const [posts, setPosts] = useState([])
 
-    // const showPosts = (posts) => {
-    //     navigate()
-    // }
+    useEffect(() => {
+        const handlePosts = async () => {
+            const data = await GetPosts()
+            setPosts(data)
+        }
+        handlePosts()
+    }, [])
+
 
     return (
         <div className='feed-page'>
-            <div className='post-text'>
-                Post Update Here!
-            </div>
-            <div className='post-cards'>
-                Posts Grid Here.
-            </div>
+            {posts.map((post) => (
+                <div className='card' key={post.id}>
+                    <h3>{post.title}</h3>
+                    <div> 
+                        <img src={post.image} alt='post' />
+                    </div>
+                    <p></p>
+                </div>
+            ))}
         </div>
     )
 }
