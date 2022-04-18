@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import "../styles/footer.css";
 
 const Footer = () => {
     return (
@@ -8,7 +7,7 @@ const Footer = () => {
 
             </div>
             <div className='Middle-footer'>
-
+                <h6>Copyright ©2022 All Rights Reserved</h6>
             </div>
             <div className='RightSide-footer'>
 
