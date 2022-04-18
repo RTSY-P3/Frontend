@@ -31,8 +31,7 @@ const Credits = () => {
                 </div>
                 <div className='profile-wrapper'></div>
                 <div className='profile'>
-                    
-                       <a  href='https://www.linkedin.com/in/tiffanympereira/' target="_blank" rel="noreferrer"><div className='profile-image profile-1'></div></a> 
+                       <a href='https://www.linkedin.com/in/tiffanympereira/' target="_blank" rel="noreferrer"><div className='profile-image profile-1'></div></a> 
                         <h4>Tiffany</h4>
                 </div>  
                 <div className='profile'>
