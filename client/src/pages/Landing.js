@@ -14,7 +14,7 @@ const Landing = () => {
                     <p className='landing-description' > Join Codr. today and get inspired with incredible projects from lead software engineers around the world.</p> 
                 </div>
                 <div className='landing-button-wrapper'>
-                 <button className='landingbutton' onClick={() => navigate('/signin')}>Become a Pro</button>   
+                 <button className='landingbutton' onClick={() => navigate('/register')}>Become a Pro</button>   
                 </div> 
             </div>
         </main>
