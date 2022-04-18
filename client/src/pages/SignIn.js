@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SignInUser } from "../services/Auth";
+import "../styles/signin.css"
 
 const SignIn = (props) => {
   let navigate = useNavigate()
@@ -22,33 +23,46 @@ const SignIn = (props) => {
 
   return (
     <div className="sign-in-page">
-      <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
-            <input
-              onChange={handleChange}
-              name="email"
-              type="email"
-              placeholder="example@example.com"
-              value={formValues.email}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="password"
-              value={formValues.password}
-              required
-            />
-          </div>
-          <button disabled={!formValues.email || !formValues.password}>
-            Sign In
-          </button>
-        </form>
+      <div className="screen">
+        <div className="screen__content">
+          <form className="login" onSubmit={handleSubmit}>
+            <div className="login_field">
+              <label htmlFor="email"></label>
+              <i class="login__icon fas fa-user"></i>
+              <input
+                className="login_input"
+                id="login_input"
+                onChange={handleChange}
+                name="email"
+                type="email"
+                placeholder="Email"
+                value={formValues.email}
+                required
+              />
+            </div>
+            <div className="login_field">
+              <label htmlFor="password"></label>
+              <input
+                className="login_input"
+                onChange={handleChange}
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formValues.password}
+                required
+              />
+            </div>
+            <button className='signin' disabled={!formValues.email || !formValues.password}>
+              Sign In
+            </button>
+            <div class="screen__background">
+              <span class="screen__background__shape screen__background__shape4"></span>
+              <span class="screen__background__shape screen__background__shape3"></span>		
+              <span class="screen__background__shape screen__background__shape2"></span>
+              <span class="screen__background__shape screen__background__shape1"></span>
+		        </div>		
+          </form>
+        </div>
       </div>
     </div>
   );
