@@ -6,7 +6,7 @@ const Landing = () => {
     let navigate = useNavigate()
     
     return (
-        <div className="landing-container">
+        <main className="landing-container">
             <div className='landing-leftside'></div>
             <div className='landing-rightside'>
                 <div className='landing-content'>
@@ -17,7 +17,7 @@ const Landing = () => {
                  <button className='landingbutton' onClick={() => navigate('/signin')}>Become a Pro</button>   
                 </div> 
             </div>
-        </div>
+        </main>
     )
 }
 
