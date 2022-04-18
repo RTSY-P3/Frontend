@@ -1,6 +1,5 @@
 import './styles/App.css'
-//import axios from 'axios'
-import React from 'react'
+import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer'
 import Landing from './pages/Landing'
@@ -12,10 +11,24 @@ import Register from './pages/Register'
 import SignIn from './pages/SignIn'
 
 const App = () => {
+  
+  const [authenticated, toggleAuthenticated] = useState(false)
+  const [user, setUser] = useState(null)
+
+  const handleLogOut = () => {
+    setUser(null)
+    toggleAuthenticated(false)
+    localStorage.clear()
+  }
+
   return (
     <div className="App">
       <header className='Nav'>
-        <Nav />
+        <Nav 
+            authenticated={authenticated}
+            user={user}
+            handleLogOut={handleLogOut}
+        />
       </header>
        <main className="Routes"> 
          <Routes>
