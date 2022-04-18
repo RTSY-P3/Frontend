@@ -10,7 +10,7 @@
 
 .hero-h1{
     font-size: 36px;
-    color:#134E15;
+    color:#000000;
 }
 
 .hero-p {
@@ -45,7 +45,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    border-top: 2px solid #134E15;
+    border-top: 2px solid #000000;
     margin-bottom: 100px;
 }
 
@@ -57,7 +57,7 @@
     font-size: 18px;
     line-height: 28px;
     font-size: 36px;
-    color:#134E15;
+    color:#000000;
 }
 
 
