@@ -1,0 +1,49 @@
+import { React, useState } from 'react'
+import axios from 'axios'
+
+function Comment(props) {
+    const {comments} = props
+    const [fBody, setBody] = useState("")
+    const [fUserId, setUserId] = useState("")
+    const [fCreatedAt, setCreatedAt] = useState("")
+    const [fUpdatedAt, setUpdatedAt] = useState("")
+    const [fId, setId] = useState("")
+    const [isAdd, setAdd] = useState(true)
+    
+    const getComment = () => {
+        return {
+                body: fBody,
+                userId: fUserId,
+                createdAt: fCreatedAt,
+                updatedAt: fUpdatedAt
+            }
+        }
+
+    const loadComment = (e) => {
+        const value = e.target.value
+        const comment = comments.find((comment)=> { return comment.body === value })
+        setBody(comment.body)
+        setUserId(comment.userId)
+        setCreatedAt(comment.createdAt)
+        setUpdatedAt(comment.updatedAt)
+        setId(comment._id)
+        console.log("this is a test", comment)
+    }        
+
+    const sendToDB = async (e) => {
+        e.preventDefault()  
+        const comments = getComment()        
+            await axios.post(`http://127.0.0.1:3001/comments/create`, comments)
+        window.location.reload()
+    }
+    
+    return (
+        <div className='comment'>
+            <form id='add-form' onSubmit= {sendToDB}>
+                <input body="body" placeholder="Enter Comment" className="form-control"  type="text" value={fBody} onChange={(e) => setBody(e.target.value)}/>
+
+            </form>
+        </div>
+    )
+}
+export default Comment
