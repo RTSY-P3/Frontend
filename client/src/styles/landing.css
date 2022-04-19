@@ -19,6 +19,19 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    position: relative;
+    animation: slide-in .5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+        left: -300px;
+        opacity: 0.3;
+    }
+    100% {
+        left: 0px;
+    }
 }
 
 .landing-rightside{
@@ -40,7 +53,7 @@
 }
 
 .landing-description {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300;
     margin: 2em 0;
 }
