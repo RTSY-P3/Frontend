@@ -3,7 +3,7 @@ import { GetPosts } from '../services/PostServices'
 import { useNavigate, Link } from 'react-router-dom'
 import '../styles/feed.css'
 
-const Feed = ( {user, authenticated }) => {
+const Feed = ( {user, authenticated } ) => {
     const [posts, setPosts] = useState([])
     let navigate = useNavigate()
 

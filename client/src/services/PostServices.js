@@ -8,3 +8,12 @@ export const GetPosts = async () => {
         throw error
     }
 }
+
+export const CreateProject = async () => {
+    try {
+      const res = await Client.post('/projects')
+      return res.data
+    } catch (error) {
+      throw error
+    }
+  }
