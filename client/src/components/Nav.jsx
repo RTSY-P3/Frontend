@@ -33,7 +33,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
   return (
     <header>
       
-      <Link to='/'>
+      <Link to='/feed'>
         <div className="logo-wrapper" alt='logo'>
         <h3>Codr<span style={{ color:'#5E3DD3'}}>.</span></h3>
         </div>
