@@ -9,8 +9,10 @@
 }
 
 .hero-h1{
-    font-size: 36px;
-    color:#000000;
+    font-size: 48px;
+    background: linear-gradient(0.25turn, #5E3DD3, #D085F0, #f69d3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero-p {
@@ -45,7 +47,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    border-top: 2px solid #000000;
+    border-top: 2px solid #fff;
     margin-bottom: 100px;
 }
 
@@ -57,7 +59,6 @@
     font-size: 18px;
     line-height: 28px;
     font-size: 36px;
-    color:#000000;
 }
 
 

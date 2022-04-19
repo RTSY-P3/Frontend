@@ -9,7 +9,7 @@ const Credits = () => {
                 <div className='credit-left'>
                     <h1 className='hero-h1'>The heart of the Developing Community</h1>
                     <p className='hero-p'>
-                    <strong>We’re on a mission to build the world’s best community for developer to share, grow, and get hired.</strong> (Actually, we are just building this website so we could pass this course, you can check the project by clicking this link 👉  <a style={{ color:'#134E15', fontWeight:'600' }} href='https://github.com/RTSY-P3/Frontend' target="_blank" rel="noreferrer"> here</a>)
+                    <strong>We’re on a mission to build the world’s best community for developer to share, grow, and get hired.</strong> (Actually, we are just building this website so we could pass this course, you can check the project by clicking this link 👉  <a style={{ color:'#5E3DD3', fontWeight:'600' }} href='https://github.com/RTSY-P3/Frontend' target="_blank" rel="noreferrer"> here</a>)
                     </p>
                 </div>
                 <div className='section-image'>
@@ -19,7 +19,7 @@ const Credits = () => {
 
             </div>
             <div className='hero-image'>
-                <ima src="" alt=""></ima>
+                <img src="" alt=""></img>
             </div>
 
             <div className='section-2'>
