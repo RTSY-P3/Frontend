@@ -9,9 +9,9 @@ export const GetPosts = async () => {
     }
 }
 
-export const CreateProject = async () => {
-    try {
-      const res = await Client.post('/projects')
+export const CreateProject = async (data) => {
+    try { 
+      const res = await Client.post('/projects', data)
       return res.data
     } catch (error) {
       throw error

@@ -26,17 +26,17 @@ const SignIn = (props) => {
     //https://codepen.io/Mohuth/pen/QWgrPvp?editors=1100
     <div className="sign-in-page">
       <div className="screen">
-      <div class="screen__background">
-              <span class="screen__background__shape screen__background__shape4"></span>
-              <span class="screen__background__shape screen__background__shape3"></span>		
-              <span class="screen__background__shape screen__background__shape2"></span>
-              <span class="screen__background__shape screen__background__shape1"></span>
+      <div className="screen__background">
+              <span className="screen__background__shape screen__background__shape4"></span>
+              <span className="screen__background__shape screen__background__shape3"></span>		
+              <span className="screen__background__shape screen__background__shape2"></span>
+              <span className="screen__background__shape screen__background__shape1"></span>
 		        </div>		
         <div className="screen__content">
           <form className="login" onSubmit={handleSubmit}>
             <div className="login_field">
               <label htmlFor="email"></label>
-              <i class="login__icon fas fa-user"></i>
+              <i className="login__icon fas fa-user"></i>
               <input
                 className="login_input"
                 id="login_input"
