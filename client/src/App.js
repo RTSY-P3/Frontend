@@ -1,5 +1,5 @@
 import './styles/App.css'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer'
 import Landing from './pages/Landing'
@@ -9,6 +9,7 @@ import Feed from './pages/Feed'
 import MyProfile from './pages/MyProfile'
 import Register from './pages/Register'
 import SignIn from './pages/SignIn'
+import { CheckSession } from './services/Auth'
 
 const App = () => {
   
@@ -21,6 +22,20 @@ const App = () => {
     localStorage.clear()
   }
 
+  const checkToken = async () => {
+    const user = await CheckSession()
+    setUser(user)
+    toggleAuthenticated(true)
+  }
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      checkToken()
+    }
+  }, [])
+
+
   return (
     <div className="App">
       <header className='Nav'>
@@ -31,12 +46,12 @@ const App = () => {
         />
       </header>
        <main className="Routes"> 
-         <Routes>
+         <Routes> 
           <Route path='/' element={<Landing />}/>
-          <Route path='/feed' element={<Feed />}/>
+          <Route path='/feed' element={<Feed user={user} authenticated={authenticated} />}/>
           <Route path='/myprofile' element={<MyProfile />}/>
           <Route path='/register' element={<Register />}/>
-          <Route path='/signin' element={<SignIn />}/>
+          <Route path='/signin' element={<SignIn setUser={setUser} toggleAuthenticated={toggleAuthenticated} />}/>
           <Route path='/credits' element={<Credits />}/>
         </Routes>
        </main> 
