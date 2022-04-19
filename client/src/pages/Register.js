@@ -96,10 +96,7 @@ const Register = () => {
               !formValues.email ||
               (!formValues.password &&
                 formValues.confirmPassword === formValues.password)
-            }
-          >
-            Register
-          </button>
+            }>Become a Pro</button>
         </form>
       </div>
     </div>
