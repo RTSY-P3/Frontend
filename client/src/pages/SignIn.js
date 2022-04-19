@@ -23,47 +23,46 @@ const SignIn = (props) => {
 
   return (
     <div className="sign-in-page">
-      <div className="screen">	
-        <div className="screen__content">
-
-
-
-          <form className="login" onSubmit={handleSubmit}>
+      <div className='signIn-leftside'></div>
+      <div className="screen__content">
+          <div>
+            <h3 className='signin-description'>Welcome back! Please sign back in.</h3>
+            <h1 className='signin-header'>Welcome back</h1>
+          </div>
+          <form className="login-form" onSubmit={handleSubmit}>
             <div className="login_field">
-              <label htmlFor="email"></label>
-              <i className="login__icon fas fa-user"></i>
+              <label className="email">Email</label>
               <input
                 className="login_input"
-                id="login_input"
                 onChange={handleChange}
                 name="email"
                 type="email"
-                placeholder="Email"
+                placeholder="Email your email"
                 value={formValues.email}
                 required
               />
             </div>
-            
+
             <div className="login_field">
-              <label htmlFor="password"></label>
+              <label className="password">Password</label>
               <input
                 className="login_input"
                 onChange={handleChange}
                 type="password"
                 name="password"
-                placeholder="Password"
+                placeholder="Enter your password"
                 value={formValues.password}
                 required
               />
             </div>
-            <button className='signin' disabled={!formValues.email || !formValues.password}>
+            <button className='login_signin' disabled={!formValues.email || !formValues.password}>
               Sign In
             </button>
-            
+            <p className='signin-intro'>Don’t have an account? <a href="/register"><strong style={{ color:'#5E3DD3'}}>Sign up now!</strong></a></p>
           </form>
+          <div className='counter'></div>
         </div>
       </div>
-    </div>
   );
 };
 
