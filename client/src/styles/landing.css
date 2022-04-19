@@ -1,4 +1,3 @@
-
 .landing-leftside, .landing-rightside {
     height: 90vh;
     width: 100%;
@@ -10,6 +9,7 @@
     justify-content: center;
     align-items: center;
     padding: 50px;
+    height: calc(100vh - 4em);
 }
 
 .landing-leftside{
@@ -19,6 +19,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    height: calc(100vh - 8em);
     position: relative;
     animation: slide-in .5s;
     animation-timing-function: ease-in-out;
@@ -39,43 +40,108 @@
     flex:50%;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: center;
     margin-left: 40px;
+    animation: slide-out 1s;
+    animation-timing-function: ease-in;
+}
+@keyframes slide-out {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .landing-button-wrapper{
+    display: flex;
     align-items: flex-start;
+    flex-direction: row;
 }
 
 .landing-header {
     font-size: 72px;
     font-weight: 700;
+    text-align: center;
 }
 
 .landing-description {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 300;
-    margin: 2em 0;
+    margin: 2em 0 1.5em;
+    text-align: center;
 }
 
 .landingbutton {
+    color: #fff !important;
+    background-color: #5E3DD3;
     border-radius: 10px;
-    padding: 1.5em 3em;
-    border: 2px solid #5D54A4;
-    color:#5D54A4;
-    background-color: Transparent;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 700;
+    border: 1px solid #5E3DD3;
+    width: 200px;
+    height:60px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 30px;
 }
-    
 .landingbutton:hover {
     color: white;
-    background-color: #5D54A4;
-
+    background-color: #867dc7;
 }
 
 
+.landingbuttonSignin {
+    color: #5E3DD3;
+    /* background-color: #5D54A4; */
+    border-radius: 10px;
+    border: 1px solid #5E3DD3;
+    width: 200px;
+    height:60px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.landingbuttonSignin:hover{
+    background-color: #867dc7;
+    color:#fff;
+}
+
+.backto-Signin {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#Project {
+    font-size: 72px;
+    background: linear-gradient(0.25turn, #5E3DD3, #D085F0, #f69d3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .counter{
+    width: 100px;
+    height: 100px;
+} */
+.counter {
+    background-image: url('../assets/LandingImage/counter.gif');
+    width: 200px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: contain;
+    position: absolute; 
+    bottom: 10px;
+    animation: slide-up 2s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes slide-up {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 @media only screen and (max-width: 1150px) {

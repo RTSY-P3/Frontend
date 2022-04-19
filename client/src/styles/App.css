@@ -2,5 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: #131314;
+    color: #fff;
+    text-decoration: none;
     /* text-shadow: -1px 3px 3px indigo; */
 }

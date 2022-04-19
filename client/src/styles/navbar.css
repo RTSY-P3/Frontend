@@ -1,3 +1,7 @@
+Link {
+  text-decoration: none;
+}
+
 header {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
@@ -5,30 +9,27 @@ header {
     display: flex;
     margin-top: 10px;
     width: 100%;
-}
-
-.logo-wrapper,
-.logo-text {
-    font-size: 28px;
-    margin: auto .5em;
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex: 50%;
-    justify-content: left;
-    align-items: center;
-    text-shadow: -1px 3px 3px rgb(195, 154, 254);
-}
-
-.link-logo{
     text-decoration: none;
 }
+
+
+.logo,
+.logo-wrapper {
+  flex: 50%;
+  display: flex;
+  justify-content: right;
+  padding-left: 50px;
+  align-items: center;
+  font-size: 32px;
+}
+
+
 
 nav {
     flex: 50%;
     display: flex;
     justify-content: right;
-    padding-right: 30px;
+    padding-right: 50px;
     align-items: center;
 }
 
@@ -37,9 +38,10 @@ nav h3 {
   text-decoration: none;
   text-transform: uppercase;
   margin: auto .5em;
-  color: black;
+  color: #fff;
   padding: 5px 10px;
   font-weight: 600;
+  font-size: 18px;
 }
 nav a:hover{
     text-decoration: line-through;
