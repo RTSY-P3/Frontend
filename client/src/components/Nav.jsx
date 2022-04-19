@@ -9,10 +9,11 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
   if (user) {
     authenticatedOptions = (
       <nav>
-        <h3>Welcome!</h3>
-        <Link to="/resources">Resources</Link>
+         <Link to="/createpost">Create A Post</Link>
+        <h3>Welcome {user.email}!</h3>
         <Link to="/credits">Credits</Link>
         <Link to="/feed">Feed</Link>
+        <Link to="/myprofile">My Profile</Link>
         <Link onClick={handleLogOut} to="/">
           Sign Out
         </Link>

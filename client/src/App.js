@@ -1,5 +1,5 @@
 import './styles/App.css'
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer'
 import Landing from './pages/Landing'
@@ -9,6 +9,7 @@ import Feed from './pages/Feed'
 import MyProfile from './pages/MyProfile'
 import Register from './pages/Register'
 import SignIn from './pages/SignIn'
+import CreatePath from './pages/CreatePost'
 import { CheckSession } from './services/Auth'
 
 const App = () => {
@@ -48,8 +49,9 @@ const App = () => {
        <main className="Routes"> 
          <Routes> 
           <Route path='/' element={<Landing />}/>
+          <Route path='/createpost' element={<CreatePath user={user} authenticated={authenticated}/>}/>
           <Route path='/feed' element={<Feed user={user} authenticated={authenticated} />}/>
-          <Route path='/myprofile' element={<MyProfile />}/>
+          <Route path='/myprofile' element={<MyProfile user={user} authenticated={authenticated}/>}/>
           <Route path='/register' element={<Register />}/>
           <Route path='/signin' element={<SignIn setUser={setUser} toggleAuthenticated={toggleAuthenticated} />}/>
           <Route path='/credits' element={<Credits />}/>
