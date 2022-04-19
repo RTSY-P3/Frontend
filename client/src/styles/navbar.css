@@ -17,6 +17,7 @@ header {
     flex: 50%;
     justify-content: left;
     align-items: center;
+    text-shadow: -1px 3px 3px rgb(195, 154, 254);
 }
 
 .link-logo{
@@ -49,36 +50,38 @@ nav a:hover{
   }
 
   .signup {
-    color: #134E15 !important;
-    border: 1px solid #134E15;
+    color: #fff !important;
+    background-color: #5D54A4;
     border-radius: 10px;
+    border: 1px solid #5D54A4;
     padding: .75em 1.5em;
   }
   .signup:hover {
-    color: #fff !important;
-    background-color: #134E15;
+    border: 1px solid #5D54A4;
+    background-color: #5D54A4;
+    color: #FFF !important;
   }
     
   .signin {
     color: #fff !important;
-    background-color: #134E15;
+    background-color: #5D54A4;
     border-radius: 10px;
-    border: 1px solid #134E15;
+    border: 1px solid #5D54A4;
     padding: .75em 1.5em;
   }
   .signin:hover {
-  border: 1px solid #134E15;
-  background-color: #FFF;
-  color: #134E15 !important;
+    border: 1px solid #5D54A4;
+    background-color: #5D54A4;
+    color: #FFF !important;
   } 
 
 
   @media only screen and (max-width: 600px) {
     .signin {
         color: #fff !important;
-        background-color: #134E15;
+        background-color: #5D54A4;
         border-radius: 10px;
-        border: 1px solid #134E15;
+        border: 1px solid #5D54A4;
         padding: .5em 1em;
       }
       .signup{

@@ -19,6 +19,19 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    position: relative;
+    animation: slide-in .5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slide-in {
+    0% {
+        left: -300px;
+        opacity: 0.3;
+    }
+    100% {
+        left: 0px;
+    }
 }
 
 .landing-rightside{
@@ -40,7 +53,7 @@
 }
 
 .landing-description {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300;
     margin: 2em 0;
 }
@@ -48,8 +61,8 @@
 .landingbutton {
     border-radius: 10px;
     padding: 1.5em 3em;
-    border: 2px solid #134E15;
-    color:#134E15;
+    border: 2px solid #5D54A4;
+    color:#5D54A4;
     background-color: Transparent;
     text-transform: uppercase;
     font-size: 16px;
@@ -58,7 +71,7 @@
     
 .landingbutton:hover {
     color: white;
-    background-color: #134E15;
+    background-color: #5D54A4;
 
 }
 

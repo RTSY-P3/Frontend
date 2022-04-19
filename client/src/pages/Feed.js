@@ -17,6 +17,7 @@ const Feed = ( {user, authenticated }) => {
 
     return (user && authenticated) ? (
         <div className='feed-page'>
+
             {posts.map((post) => (
                 <div className='card' key={post.id}>
                     <h3>{post.title}</h3>
