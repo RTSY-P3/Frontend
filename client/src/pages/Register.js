@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RegisterUser } from '../services/Auth'
 import { useNavigate } from "react-router-dom";
+import '../styles/register.css'
 
 const Register = () => {
   let navigate = useNavigate()
@@ -34,51 +35,63 @@ const Register = () => {
 
   return (
     <div className="register-page">
-      <div className="card-overlay centered">
+      <div className='register-leftside'></div>
+      <div className="screen__content">
+           <div>
+            <h3 className='register-description'>START FOR FREE</h3>
+            <h1 className='register-header'>Sign up to Codr.</h1>
+          </div>
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
+            <label className="name">Name</label>
             <input
+              className="register_input"
               onChange={handleChange}
               name="name"
               type="text"
-              placeholder="Full Name"
+              placeholder="Enter your name"
               value={formValues.name}
               required
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
+            <label className="email">Email</label>
             <input
+              className="register_input"
               onChange={handleChange}
               name="email"
               type="email"
-              placeholder="example@example.com"
+              placeholder="Enter your email"
               value={formValues.email}
               required
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
+            <label className="password">Password</label>
             <input
+              className="register_input"
               onChange={handleChange}
               type="password"
               name="password"
+              placeholder="Enter your password"
               value={formValues.password}
               required
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="confirmPassword">Confirm Password</label>
+            <label className="confirmPassword">Confirm Password</label>
             <input
+              className="register_input"
               onChange={handleChange}
               type="password"
               name="confirmPassword"
+              placeholder="Confirm your passord"
               value={formValues.confirmPassword}
               required
             />
           </div>
-          <button
+          <p className='register-rules'>By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</p>
+          <button className='login_register'
             disabled={
               !formValues.email ||
               (!formValues.password &&
