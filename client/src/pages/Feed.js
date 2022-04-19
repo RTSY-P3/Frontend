@@ -13,8 +13,8 @@ const Feed = () => {
     }, [])
 
 
-    return (
-        <div className='feed-page'>
+    return  (
+        <div className='feed-page'>   
             {posts.map((post) => (
                 <div className='card' key={post.id}>
                     <h3>{post.title}</h3>

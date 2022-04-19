@@ -17,6 +17,7 @@ header {
     flex: 50%;
     justify-content: left;
     align-items: center;
+    text-shadow: -1px 3px 3px rgb(195, 154, 254);
 }
 
 .link-logo{
