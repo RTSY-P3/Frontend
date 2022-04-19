@@ -31,7 +31,7 @@ const SignIn = (props) => {
           <form className="login" onSubmit={handleSubmit}>
             <div className="login_field">
               <label htmlFor="email"></label>
-              <i class="login__icon fas fa-user"></i>
+              <i className="login__icon fas fa-user"></i>
               <input
                 className="login_input"
                 id="login_input"

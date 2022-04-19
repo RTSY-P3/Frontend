@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { GetPosts } from '../services/PostServices'
 import { useNavigate } from 'react-router-dom'
 
-const MyProfile = ( {user, authenticated } ) => {
+const MyProfile = ( {user, authenticated} ) => {
     const [posts, setPosts] = useState([])
     let navigate = useNavigate()
 
@@ -17,7 +17,13 @@ const MyProfile = ( {user, authenticated } ) => {
 
     return (user && authenticated) ? (
         <div className="my-profile">
-            <h1>this is my profile</h1>
+             {posts.map((post) => ( (post.userId === user.id) ? (
+                <div className='card' key={post.id}>
+                    <h4>{post.title}</h4>
+                    <img src={post.image} alt='post' />
+                    <p>{post.body}</p>
+                </div> ) : <div></div>
+             ))}
         </div>
     ) : (
         <div>
