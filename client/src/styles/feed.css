@@ -1,0 +1,25 @@
+.feed-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.card {
+    display: flexbox;
+    align-content: space-around;
+    margin: 10px;
+}
+
+h3 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px;
+}
+
+img {
+    max-width: 500px;
+    max-height: 300px;
+}
