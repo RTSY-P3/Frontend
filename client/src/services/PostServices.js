@@ -17,3 +17,21 @@ export const CreateProject = async (data) => {
       throw error
     }
   }
+
+export const GetYourPosts = async () => {
+    try {
+        const res = await Client.get('/projects/myprojects/:user_id')
+        return res.data 
+    } catch (error) {
+        throw error 
+    }
+}
+
+export const GetComments = async () => {
+    try {
+        const res = await Client.get('/projects/comments')
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
