@@ -220,5 +220,27 @@
     }
     .landing-rightside{
         margin-left: 0px;
+        margin: 0;
+    }
+    .landingbutton,
+    .landingbuttonSignin {
+        border-radius: 10px;
+        font-size: 14px;
+        margin-bottom: 15px;
+        margin-right: 0;
+        width: 300px;
+        height:60px;
+    } 
+    .landing-button-wrapper {
+        flex-direction: column;
+    }
+    .backto-Signin {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .counter {
+        display: none;
     }
 }
