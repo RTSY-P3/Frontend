@@ -45,6 +45,7 @@ export const GetComments = async () => {
     }
 }
 
+
 export const DeleteProject = async (projectId) => {
   try {
     const res = await Client.delete(`projects/${projectId}`)

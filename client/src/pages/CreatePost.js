@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CreateProject } from "../services/PostServices";
+import '../styles/createpost.css'
 
 const CreatePost = ( {user, authenticated } ) => {
   let navigate = useNavigate();
@@ -29,19 +30,15 @@ const CreatePost = ( {user, authenticated } ) => {
 
   return (user && authenticated) ? (
     <div className="createpost">
+      <div className="createpost_content">
+        <h3 className='create-post'>What are you working on?</h3>
+      </div>
+      <div>
       <form className="col" onSubmit={handleSubmit}>
-        <div className="input-wrapper">
+        <div className="create-wrapper">
+          <label className="creat-lable">Let’s begin with the name</label>
           <input
-            onChange={handleChange}
-            type="text"
-            name="image"
-            placeholder="Image Link"
-            value={formValues.image}
-            required
-          />
-        </div>
-        <div className="input-wrapper">
-          <input
+          className="create-input"
             onChange={handleChange}
             name="title"
             type="text"
@@ -50,8 +47,22 @@ const CreatePost = ( {user, authenticated } ) => {
             required
           />
         </div>
-        <div className="input-wrapper">
+        <div className="create-wrapper">
+        <label className="creat-lable">Next, set the thumbnail photos</label>
+        <input
+          className="create-input"
+            onChange={handleChange}
+            type="text"
+            name="image"
+            placeholder="Image Link"
+            value={formValues.image}
+            required
+          />
+        </div>
+        <div className="create-wrapper">
+        <label className="creat-lable">Tell everyone about your project</label>
           <input
+          className="create-input"
             onChange={handleChange}
             name="body"
             type="textarea"
@@ -60,9 +71,9 @@ const CreatePost = ( {user, authenticated } ) => {
             required
           />
         </div>
-
-        <button>Submit Post</button>
+        <button className='landingbutton' >Submit Post</button>
       </form>
+    </div>
     </div>
   ): (
     <div className="must-signin" 
