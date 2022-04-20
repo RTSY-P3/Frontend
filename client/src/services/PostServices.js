@@ -44,3 +44,12 @@ export const GetComments = async () => {
         throw error
     }
 }
+
+export const DeleteProject = async () => {
+  try {
+    const res = await Client.destroy('/:project_id')
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
