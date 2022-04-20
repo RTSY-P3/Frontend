@@ -1,38 +1,33 @@
 import React, { useState, useEffect } from "react"
 import { GetProjects } from '../services/PostServices'
 import { useNavigate } from 'react-router-dom'
-import { GetComments, DeleteProject} from '../services/PostServices'
-import Delete from "../components/Delete"
-
+import { GetComments } from '../services/PostServices'
+import DeleteProjectBtn from "../components/DeleteProjectBtn"
 import '../styles/App.css'
 
 const MyProfile = ( {user, authenticated} ) => {
-    console.log({user})
-    // const [posts, setPosts] = useState([])
+    const [projects, setProjects] = useState([])
     const [comments, setComments] = useState([])
     const [projects, setProject] = useState([])
 
     let navigate = useNavigate()
 
     useEffect(() => {
-        const handleProject = async () => {
+        const handleProjects = async () => {
             const data = await GetProjects()
-            setProject(data)
+            setProjects(data)
         }
         
         const handleComments = async () => {
             const data = await GetComments()
             setComments(data)
         }
-        handleProject()
+
+        handleProjects()
         handleComments()
     }, [])
 
-    // console.log(projects[0].id)
-    const handleDelete = async () => {
-        await DeleteProject()
-    }
-
+    // console.log(projects[0].Comments)
 
     return (user && authenticated) ? (
         <div className="my-profile">
@@ -41,7 +36,7 @@ const MyProfile = ( {user, authenticated} ) => {
                     <h4>{post.title}</h4>
                     <img src={post.image} alt='post' />
                     <p>{post.body}</p>
-
+                    <DeleteProjectBtn id={post.id} />
                     <div>
                         <h3>Comments:</h3>
                         {comments.map((comment)=> (comment.userId === user.id) ? (

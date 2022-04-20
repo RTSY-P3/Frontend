@@ -46,12 +46,26 @@ export const GetComments = async () => {
 }
 
 
-export const DeleteProject = async (data) => {
+export const DeleteProject = async (projectId) => {
   try {
-    const res= await Client.delete('/projects/:project_id')
-
+    const res = await Client.delete(`projects/${projectId}`)
     return res.data
   } catch (error) {
     throw error
   }
 }
+
+export const UpdateProject = async (projectId, data) => {
+  try{
+    const res = await Client.put(`projects/${projectId}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
+  //parameters of function need to accept "projectId"
+  //need projectId and data to update project. 
+  //send data to server
+  //handle error (try catch)
+  //return res.data
