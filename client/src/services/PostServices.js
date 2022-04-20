@@ -45,9 +45,11 @@ export const GetComments = async () => {
     }
 }
 
+
 export const DeleteProject = async (data) => {
   try {
     const res= await Client.delete('/projects/:project_id')
+
     return res.data
   } catch (error) {
     throw error

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import { GetProjects } from '../services/PostServices'
 import { useNavigate } from 'react-router-dom'
 import { GetComments, DeleteProject} from '../services/PostServices'
+import Delete from "../components/Delete"
+
 import '../styles/App.css'
 
 const MyProfile = ( {user, authenticated} ) => {
@@ -39,7 +41,7 @@ const MyProfile = ( {user, authenticated} ) => {
                     <h4>{post.title}</h4>
                     <img src={post.image} alt='post' />
                     <p>{post.body}</p>
-                    <button onClick={handleDelete} >Delete</button>
+
                     <div>
                         <h3>Comments:</h3>
                         {comments.map((comment)=> (comment.userId === user.id) ? (
