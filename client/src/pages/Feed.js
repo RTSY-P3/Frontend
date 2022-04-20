@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { GetPosts } from '../services/PostServices'
 import { useNavigate, Link } from 'react-router-dom'
-import Comment from '../components/Comment'
+// import Comment from '../components/Comment'
 import '../styles/feed.css'
-
 
 const Feed = ( {user, authenticated } ) => {
     const [posts, setPosts] = useState([])
+    // const [comments, setComments] = useState([])
     let navigate = useNavigate()
 
     useEffect(() => {
@@ -14,7 +14,12 @@ const Feed = ( {user, authenticated } ) => {
             const data = await GetPosts()
             setPosts(data)
         }
+        // const handleComments = async () => {
+        //     const data = await GetComments()
+        //     setComments(data)
+        // }
         handlePosts()
+        // handleComments()
     }, [])
 
 
@@ -24,27 +29,28 @@ const Feed = ( {user, authenticated } ) => {
                 <div className='feed-title'>
                     <h1>Users Projects</h1>
                 </div>
-                {posts.map((post) => (
+                    {posts.map((post) => (
                     <div className='card' key={post.id}>
-                        {/* <Link to={`/posts/${post._id}/details`}>  */}
-                        <h3>{post.title}</h3>
-                        <div> 
-                            <img src={post.image} alt='post' />
-                        </div>
-                        {/* </Link > */}
-                        <Comment ></Comment>
+                        <Link to={`/posts/${post._id}/details`}> 
+                            <h3>{post.title}</h3>
+                                <div> 
+                                    <img src={post.image} alt='post' />
+                                </div>
+                        </Link >
+                        {/* <Comment /> */}
+                        {/* {comments.map((comment)=> (comment.userId === user.id) ? (
+                            <div className="comments">
+                                <h3>{comment.body}</h3>
+                            </div>
+                        ) : <div></div>)} */}
                     </div>
                 ))}
             </div>
         </div>
     ) : (
-        <div className="must-signin" 
-    style={{ display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'200px'}}>
-        <h3 
-        style={{  fontSize:'36px' }}className="signin-header">
-            Oops, we fucked up sorry! 💩 </h3>
-            <button style={{ margin:'10px 0' }}className="landingbutton" onClick={() => navigate('/signin')}> Sign in</button>
-            <button className="landingbuttonSignin" onClick={() => navigate('/')}>Back to Home</button>
+        <div>
+            <h3>You must be signed in to do that! Please log in.</h3>
+            <button onClick={() => navigate('/signin')}> Sign in</button>
         </div>
     )
 }
