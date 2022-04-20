@@ -18,6 +18,15 @@ export const CreateProject = async (data) => {
     }
   }
 
+  export const CreateComment = async (data) => {
+    try { 
+      const res = await Client.post('/comments', data)
+      return res.data
+    } catch (error) {
+      throw error
+    }
+  }
+
 export const GetYourPosts = async () => {
     try {
         const res = await Client.get('/projects/myprojects/:user_id')

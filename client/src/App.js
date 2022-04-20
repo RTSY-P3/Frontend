@@ -11,6 +11,7 @@ import Register from './pages/Register'
 import SignIn from './pages/SignIn'
 import CreatePath from './pages/CreatePost'
 import { CheckSession } from './services/Auth'
+import Comment from './components/Comment'
 
 const App = () => {
   
@@ -50,6 +51,7 @@ const App = () => {
          <Routes> 
           <Route path='/' element={<Landing />}/>
           <Route path='/createpost' element={<CreatePath user={user} authenticated={authenticated}/>}/>
+          <Route path='/feed' element={<Comment user={user} authenticated={authenticated}/>}/>
           <Route path='/feed' element={<Feed user={user} authenticated={authenticated} />}/>
           <Route path='/myprofile' element={<MyProfile user={user} authenticated={authenticated}/>}/>
           <Route path='/register' element={<Register />}/>
@@ -58,7 +60,7 @@ const App = () => {
         </Routes>
        </main> 
        <footer>
-         {/* <Footer /> */}
+         <Footer />
        </footer>
     </div>
   );
