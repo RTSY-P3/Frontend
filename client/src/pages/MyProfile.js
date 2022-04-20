@@ -8,7 +8,6 @@ import '../styles/App.css'
 const MyProfile = ( {user, authenticated} ) => {
     const [projects, setProjects] = useState([])
     const [comments, setComments] = useState([])
-    const [projects, setProject] = useState([])
 
     let navigate = useNavigate()
 

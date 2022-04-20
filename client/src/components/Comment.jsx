@@ -23,13 +23,13 @@ import { CreateComment } from '../services/PostServices'
     
     return (
         <div className='comment'>
-            {/* {update ?
+             {/* {update ?
             <form onSubmit={handleSubmit}>
                 <input name='body' type='text' placeholder='Leave Comment Here' onChange={handleChange} value= {formValues.body}></input>
                 <button className="submit-button" type='submit'>Submit</button>
-            </form> :
-
+            </form> : */}
         </div>
+
     )
 }
 export default Update

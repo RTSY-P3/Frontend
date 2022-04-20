@@ -9,16 +9,14 @@ const Feed = ( {user, authenticated } ) => {
 
     const [projects, setProjects] = useState([])
 
-    const [posts, setPosts] = useState([])
     // const [comments, setComments] = useState([])
 
     let navigate = useNavigate()
-    const [comments, setComments] = useState([])
-
+  
     useEffect(() => {
-        const handlePosts = async () => {
+        const handleProject = async () => {
             const data = await GetProjects()
-            setPosts(data)
+            setProjects(data)
         }
         // const handleComments = async () => {
         //     const data = await GetComments()
