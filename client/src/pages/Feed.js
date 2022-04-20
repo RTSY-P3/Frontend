@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from 'react'
-import { GetPosts } from '../services/PostServices'
+import { GetProjects, GetComments } from '../services/PostServices'
 import { useNavigate, Link } from 'react-router-dom'
 import Comment from '../components/Comment'
 import '../styles/feed.css'
 
 
 const Feed = ( {user, authenticated } ) => {
-    const [posts, setPosts] = useState([])
+    const [projects, setProjects] = useState([])
     let navigate = useNavigate()
+    const [comments, setComments] = useState([])
 
     useEffect(() => {
-        const handlePosts = async () => {
-            const data = await GetPosts()
-            setPosts(data)
+        const handleProject = async () => {
+            const data = await GetProjects()
+            setProjects(data)
         }
-        handlePosts()
+        // const handleComments = async () => {
+        //     const data = await GetComments()
+        //     setComments(data)
+        // }
+        handleProject()
+        // handleComments()
     }, [])
 
 
@@ -23,16 +29,16 @@ const Feed = ( {user, authenticated } ) => {
             <div className='feed-body'>
                 <div className='feed-title'>
                     <h1>Users Projects</h1>
-                </div>
-                {posts.map((post) => (
+               {/* <Comment /> */}
+               </div>
+                {projects.map((post) => (
                     <div className='card' key={post.id}>
-                        {/* <Link to={`/posts/${post._id}/details`}>  */}
+                        <Link to={`/posts/${post._id}`}> 
                         <h3>{post.title}</h3>
                         <div> 
                             <img src={post.image} alt='post' />
                         </div>
-                        {/* </Link > */}
-                        <Comment ></Comment>
+                        </Link >
                     </div>
                 ))}
             </div>
