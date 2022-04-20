@@ -1,24 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import { GetPosts } from '../services/PostServices'
+import { GetProjects, GetComments } from '../services/PostServices'
 import { useNavigate, Link } from 'react-router-dom'
 // import Comment from '../components/Comment'
 import '../styles/feed.css'
 
 const Feed = ( {user, authenticated } ) => {
+
+    const [projects, setProjects] = useState([])
+
     const [posts, setPosts] = useState([])
     // const [comments, setComments] = useState([])
+
     let navigate = useNavigate()
+    const [comments, setComments] = useState([])
 
     useEffect(() => {
-        const handlePosts = async () => {
-            const data = await GetPosts()
-            setPosts(data)
+        const handleProject = async () => {
+            const data = await GetProjects()
+            setProjects(data)
         }
         // const handleComments = async () => {
         //     const data = await GetComments()
         //     setComments(data)
         // }
-        handlePosts()
+
+        handleProject()
         // handleComments()
     }, [])
 
@@ -28,22 +34,20 @@ const Feed = ( {user, authenticated } ) => {
             <div className='feed-body'>
                 <div className='feed-title'>
                     <h1>Users Projects</h1>
-                </div>
-                    {posts.map((post) => (
+
+               {/* <Comment /> */}
+               </div>
+                {projects.map((post) => (
                     <div className='card' key={post.id}>
-                        <Link to={`/posts/${post._id}/details`}> 
-                            <h3>{post.title}</h3>
-                                <div> 
-                                    <img src={post.image} alt='post' />
-                                </div>
+                        <Link to={`/posts/${post._id}`}> 
+                        <h3>{post.title}</h3>
+                        <div> 
+                            <img src={post.image} alt='post' />
+                        </div>
                         </Link >
-                        {/* <Comment /> */}
-                        {/* {comments.map((comment)=> (comment.userId === user.id) ? (
-                            <div className="comments">
-                                <h3>{comment.body}</h3>
-                            </div>
-                        ) : <div></div>)} */}
-                    </div>
+
+                </div>
+             
                 ))}
             </div>
         </div>

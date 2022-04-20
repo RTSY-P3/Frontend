@@ -1,6 +1,6 @@
 import Client from './api'
 
-export const GetPosts = async () => {
+export const GetProjects = async () => {
     try {
         const res = await Client.get('/projects')
         return res.data
@@ -45,9 +45,11 @@ export const GetComments = async () => {
     }
 }
 
-export const DeleteProject = async () => {
+
+export const DeleteProject = async (data) => {
   try {
-    const res = await Client.destroy('/:project_id')
+    const res= await Client.delete('/projects/:project_id')
+
     return res.data
   } catch (error) {
     throw error

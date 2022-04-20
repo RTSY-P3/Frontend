@@ -3,9 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { CreateComment } from '../services/PostServices'
 
 
-
     const Update = ({user, authenticated}) => {
-        console.log({user})
+ 
     const navigate = useNavigate()
     const [update, setUpdate] = useState(false)
     const [formValues, setFormValues] = useState(
@@ -29,7 +28,7 @@ import { CreateComment } from '../services/PostServices'
                 <input name='body' type='text' placeholder='Leave Comment Here' onChange={handleChange} value= {formValues.body}></input>
                 <button className="submit-button" type='submit'>Submit</button>
             </form> :
-            <button className='create-comment' onClick={() => setUpdate(true)}>Comment</button>} */}
+
         </div>
     )
 }

@@ -1,40 +1,47 @@
 import React, { useState, useEffect } from "react"
-import { GetPosts } from '../services/PostServices'
+import { GetProjects } from '../services/PostServices'
 import { useNavigate } from 'react-router-dom'
-import { GetComments } from '../services/PostServices'
+import { GetComments, DeleteProject} from '../services/PostServices'
 import Delete from "../components/Delete"
+
 import '../styles/App.css'
 
 const MyProfile = ( {user, authenticated} ) => {
-    const [posts, setPosts] = useState([])
+    console.log({user})
+    // const [posts, setPosts] = useState([])
     const [comments, setComments] = useState([])
+    const [projects, setProject] = useState([])
 
     let navigate = useNavigate()
 
     useEffect(() => {
-        const handlePosts = async () => {
-            const data = await GetPosts()
-            setPosts(data)
+        const handleProject = async () => {
+            const data = await GetProjects()
+            setProject(data)
         }
         
         const handleComments = async () => {
             const data = await GetComments()
             setComments(data)
         }
-        handlePosts()
+        handleProject()
         handleComments()
     }, [])
 
-    // console.log(posts[0].Comments)
+    // console.log(projects[0].id)
+    const handleDelete = async () => {
+        await DeleteProject()
+    }
+
 
     return (user && authenticated) ? (
         <div className="my-profile">
-             {posts.map((post) => ( (post.userId === user.id) ? (
+             {projects.map((post) => ( (post.userId === user.id) ? (
                 <div className='card' key={post.id}>
                     <h4>{post.title}</h4>
                     <img src={post.image} alt='post' />
                     <p>{post.body}</p>
-                    <Delete />
+
                     <div>
                         <h3>Comments:</h3>
                         {comments.map((comment)=> (comment.userId === user.id) ? (
