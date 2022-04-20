@@ -12,6 +12,7 @@ import SignIn from './pages/SignIn'
 import CreatePath from './pages/CreatePost'
 import { CheckSession } from './services/Auth'
 import Comment from './components/Comment'
+import Delete from './components/DeletePostBtn'
 
 const App = () => {
   
@@ -57,7 +58,7 @@ const App = () => {
           <Route path='/register' element={<Register />}/>
           <Route path='/signin' element={<SignIn setUser={setUser} toggleAuthenticated={toggleAuthenticated} />}/>
           <Route path='/credits' element={<Credits />}/>
-        
+          <Route path='/delete' element={<Delete setUser={setUser} toggleAuthenticated={toggleAuthenticated} />}/>
         </Routes>
        </main> 
        <footer>
