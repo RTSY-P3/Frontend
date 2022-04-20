@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { GetPosts } from '../services/PostServices'
 import { useNavigate } from 'react-router-dom'
 import { GetComments } from '../services/PostServices'
+import '../styles/App.css'
 
 const MyProfile = ( {user, authenticated} ) => {
     const [posts, setPosts] = useState([])
@@ -44,10 +45,14 @@ const MyProfile = ( {user, authenticated} ) => {
              ))}
         </div>
     ) : (
-        <div>
-            <h3>You must be signed in to do that! Please log in.</h3>
-            <button onClick={() => navigate('/signin')}> Sign in</button>
-        </div>
+        <div className="must-signin" 
+        style={{ display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'200px'}}>
+            <h3 
+            style={{  fontSize:'36px' }}className="signin-header">
+                Bruh...You must be signed in to do that!💩 </h3>
+                <button style={{ margin:'10px 0' }}className="landingbutton" onClick={() => navigate('/signin')}> Sign in</button>
+                <button className="landingbuttonSignin" onClick={() => navigate('/')}>Back to Home</button>
+            </div>
     )
 }
 
