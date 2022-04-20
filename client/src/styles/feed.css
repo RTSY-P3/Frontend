@@ -12,9 +12,9 @@
     margin: 100px 100px 100px 100px;
 }
 
-.feed-title {
-    background-color: transparent;
-}
+/* .feed-title {
+    background-color: black;
+} */
 
 .card {
     display: flexbox;

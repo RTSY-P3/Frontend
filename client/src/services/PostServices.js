@@ -20,7 +20,7 @@ export const CreateProject = async (data) => {
 
   export const CreateComment = async (data) => {
     try { 
-      const res = await Client.post('/comments', data)
+      const res = await Client.post('/projects/comments', data)
       return res.data
     } catch (error) {
       throw error

@@ -51,7 +51,7 @@ const App = () => {
          <Routes> 
           <Route path='/' element={<Landing />}/>
           <Route path='/createpost' element={<CreatePath user={user} authenticated={authenticated}/>}/>
-          <Route path='/feed' element={<Comment user={user} authenticated={authenticated}/>}/>
+          {/* <Route path='/feed' element={<Comment user={user} authenticated={authenticated}/>}/> */}
           <Route path='/feed' element={<Feed user={user} authenticated={authenticated} />}/>
           <Route path='/myprofile' element={<MyProfile user={user} authenticated={authenticated}/>}/>
           <Route path='/register' element={<Register />}/>
