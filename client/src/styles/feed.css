@@ -1,20 +1,25 @@
-.feed-page {
+.feed-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     padding-top: 40px;
     background-color: rgba(0, 0, 0, 0.3);
     /* box-shadow: 32px 19px rgba(0, 0, 0, 0.4); */
     border-radius: 85px;
-    margin: 100px 10px 150px 150px;
+    margin: 100px 100px 100px 100px;
+}
+
+.feed-title {
+    background-color: transparent;
 }
 
 .card {
     display: flexbox;
     align-content: space-around;
-    margin: 10px;
+    margin: 10px 40px 50px 40px;
     padding: 15px 20px 40px 20px;
     /* background: rgba(0, 0, 0, 0.4); */
     border-radius: 15px;
@@ -30,4 +35,9 @@ img {
     max-width: 500px;
     max-height: 300px;
     box-shadow:8px 9px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 5px;
+    margin-top: 20px;
 }

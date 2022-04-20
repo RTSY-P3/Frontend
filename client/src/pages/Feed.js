@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { GetPosts } from '../services/PostServices'
 import { useNavigate, Link } from 'react-router-dom'
-import Comment from '../components/Comment.jsx'
+import Comment from '../components/Comment'
 import '../styles/feed.css'
 
 const Feed = ( {user, authenticated } ) => {
@@ -19,21 +19,22 @@ const Feed = ( {user, authenticated } ) => {
 
     return (user && authenticated) ? (
         <div className='feed-page'>
-            <h1>Users Projects</h1>
-            {posts.map((post) => (
-                <div className='card' key={post.id}>
-                    <Link to={`/posts/${post._id}/details`}> 
-                    <h3>{post.title}</h3>
-                    <div> 
-                        <img src={post.image} alt='post' />
-                    </div>
-                    <div className='comment'>
-                    </div>
-                    <p></p>
-                    </Link >
-                    <Comment ></Comment>
+            <div className='feed-body'>
+                <div className='feed-title'>
+                    <h1>Users Projects</h1>
                 </div>
-            ))}
+                {posts.map((post) => (
+                    <div className='card' key={post.id}>
+                        {/* <Link to={`/posts/${post._id}/details`}>  */}
+                        <h3>{post.title}</h3>
+                        <div> 
+                            <img src={post.image} alt='post' />
+                        </div>
+                        {/* </Link > */}
+                        <Comment ></Comment>
+                    </div>
+                ))}
+            </div>
         </div>
     ) : (
         <div>
