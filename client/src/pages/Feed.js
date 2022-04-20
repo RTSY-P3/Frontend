@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { GetPosts } from '../services/PostServices'
+import { GetProjects } from '../services/PostServices'
 import { useNavigate, Link } from 'react-router-dom'
 // import Comment from '../components/Comment'
 import '../styles/feed.css'
@@ -11,7 +11,7 @@ const Feed = ( {user, authenticated } ) => {
 
     useEffect(() => {
         const handlePosts = async () => {
-            const data = await GetPosts()
+            const data = await GetProjects()
             setPosts(data)
         }
         // const handleComments = async () => {
