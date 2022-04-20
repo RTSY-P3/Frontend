@@ -44,7 +44,7 @@ import { CreateComment } from '../services/PostServices'
     const [update, setUpdate] = useState(false)
     const [formValues, setFormValues] = useState(
         {
-        text: '', 
+        body: '', 
         userId: user.id})
     const handleChange = (e) => {
         setFormValues({...formValues, [e.target.name]:e.target.value})
@@ -52,7 +52,7 @@ import { CreateComment } from '../services/PostServices'
     const handleSubmit = async (e) => {
         e.preventDefault()
         await CreateComment(formValues)
-        setFormValues({text: ''})
+        setFormValues({body: ''})
         navigate('/feed')
     }
     
@@ -60,7 +60,7 @@ import { CreateComment } from '../services/PostServices'
         <div className='comment'>
             {update ?
             <form onSubmit={handleSubmit}>
-                <input name='text' type='text' placeholder='Leave Comment Here' onChange={handleChange} value= {formValues.text}></input>
+                <input name='body' type='text' placeholder='Leave Comment Here' onChange={handleChange} value= {formValues.body}></input>
                 <button className="submit-button" type='submit'>Submit</button>
             </form> :
             <button className='create-comment' onClick={() => setUpdate(true)}>Comment</button>}
