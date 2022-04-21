@@ -57,7 +57,7 @@ export const DeleteProject = async (projectId) => {
 
 export const UpdateProject = async (projectId, data) => {
   try{
-    const res = await Client.put(`projects/${projectId}`, data)
+    const res = await Client.put(`/projects/${projectId}`, data)
     return res.data
   } catch (error) {
     throw error
