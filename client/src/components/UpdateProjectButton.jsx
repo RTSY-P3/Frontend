@@ -3,15 +3,15 @@ import { UpdateProject } from "../services/PostServices"
 import { useState } from "react"
 
 
-const UpdateProjectBtn = ( {title, body, image} ) => {
+const UpdateProjectBtn = ( { post } ) => {
     let navigate = useNavigate()
-    console.log({ body })
+    console.log({ post })
     const [update, setUpdate] = useState(false);
     const [formValues, setFormValues] = useState(
         {
-            title: "",
-            body: "",
-            image: "",
+            title: post.title,
+            body: post.body,
+            image: post.image,
             // user_id: {}
         })
         const handleChange = (e) => {
@@ -19,13 +19,13 @@ const UpdateProjectBtn = ( {title, body, image} ) => {
         }
         const handleSubmit = async (e) => {
             e.preventDefault();
-            await UpdateProject(formValues);
-            setFormValues(
-                { 
-                    title: "", 
-                    body: "", 
-                    image: "" 
-                });
+            await UpdateProject(post);
+            // setFormValues(
+            //     { 
+            //         title: "", 
+            //         body: "", 
+            //         image: "" 
+            //     });
             navigate("/myprofile");
         }
 
@@ -37,7 +37,7 @@ const UpdateProjectBtn = ( {title, body, image} ) => {
     return (
         <div>
             {update ?
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form onSubmit={handleSubmit}>
         <input name='title' type='text' placeholder='Edit title Here' onChange={handleChange} value= {formValues.title}></input>
         <input name='body' type='text' placeholder='Edit Body Here' onChange={handleChange} value= {formValues.body}></input>
         <input name='image' type='text' placeholder='Enter Image Source Here' onChange={handleChange} value= {formValues.image}></input>

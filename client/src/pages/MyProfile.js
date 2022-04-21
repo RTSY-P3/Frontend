@@ -37,7 +37,7 @@ const MyProfile = ( {user, authenticated} ) => {
                     <img src={post.image} alt='post' />
                     <p>{post.body}</p>
                     <DeleteProjectBtn id={post.id} />
-                    <UpdateProjectBtn title={post.title} body={post.body} image={post.image} />
+                    <UpdateProjectBtn post={post} />
                     <div>
                         <h3>Comments:</h3>
                         {comments.map((comment)=> (comment.userId === user.id) ? (
