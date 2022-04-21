@@ -1,3 +1,16 @@
+.feed-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    /* box-shadow: 32px 19px rgba(0, 0, 0, 0.4); */
+    border-radius: 85px;
+    margin: 10px 100px 100px 100px;
+}
 
 .feed-title {
     display: flex;
@@ -5,7 +18,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 50px;
 }
 
@@ -16,22 +29,43 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
+    /* background-image: url("https://i.imgur.com/I6h9kqm.jpg");
+    background-position: center;
+    background-attachment:fixed;
+    background-repeat: no-repeat; */
+    /* filter: blur(20px);
+    opacity: 60%; */
     width: 80vw;
+    padding-top: 40px;
     margin: auto;
     border-radius: 80px;
 }
 
+#post-title {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px;
+}
+
 .feed-content{
-    width: 500px;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    margin: 10px 40px 50px 40px;
+    padding: 15px 20px 40px 20px;
     text-align: center;
-    margin: 50px;
+    border-radius: 80px;
 }   
 
 #project-poster {
-    width: 400px;
-    height: 475px;
+    max-width: 500px;
+    max-height:300px;
     object-fit: contain;
     border-radius: 5px;
+    box-shadow:8px 9px rgba(0, 0, 0, 0.3);
+}
+
+#feed-body {
+    max-width: 500px;
+    margin: 15px;
 }
 
 .feed-intro {
