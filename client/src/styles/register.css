@@ -89,7 +89,12 @@
 	margin-left: 25px;
 }
 
-
+.col {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .register-rules {
     font-size: 12px;
@@ -106,9 +111,52 @@
         height: 60px;
         font-size: 18px;
         font-weight: 600;
-        margin-top:50px;
+        margin:50px auto;
 }
 .login_register:hover {
     color: white;
     background-color: #867dc7;    
+}
+
+
+
+@media only screen and (max-width: 1150px) {
+
+}
+
+@media only screen and (max-width: 860px) {
+
+    .register-leftside {
+        display: none;
+    }
+    .screen__content {
+        flex:100%;
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .screen__content {
+        flex:100%;
+        margin-left: 0px;
+    }
+    .register_input {
+        width: 350px;
+        height: 60px;
+        padding-left: 25px;
+    }
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .login_register {
+        width: 350px;
+        height: 60px;
+}
+    .register-header {
+    font-size: 40px;
+}
+    .register-description {
+    margin-top: 100px;
+}
 }
