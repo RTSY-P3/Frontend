@@ -30,19 +30,19 @@ const Feed = ( {user, authenticated } ) => {
                 </div>
 
                 <div className='feed-wrapper'>
-                {projects.map((post) => (
-                    <div className='feed-content' key={post.id}>
-                        {/* <Link to={`/posts/${post._id}`}>  */}
-                        <div className='feed-image'>
-                            <img id="project-poster" src={post.image} alt='post' />
+                    {projects.map((post) => (
+                        <div className='feed-content' key={post.id}>
+                            {/* <Link to={`/posts/${post._id}`}>  */}
+                            <h2 id='post-title' >{post.title}</h2>
+                            <div className='feed-image'>
+                                <img id="project-poster" src={post.image} alt='post' />
+                            </div>
+                            <div className='feed-intro'>
+                                <p id='feed-body' > {post.body}</p>
+                            </div>
+                            {/* </Link > */}
                         </div>
-                        <div className='feed-intro'>
-                            <h3 id='feed-tile' >{post.title}</h3>
-                            <p id='feed-body' > {post.body}</p>
-                        </div>
-                        {/* </Link > */}
-                    </div>
-                ))}
+                    ))}
                 </div>
             <footer>
                  <Footer />
