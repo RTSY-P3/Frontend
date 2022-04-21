@@ -1,6 +1,7 @@
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { UpdateProject } from "../services/PostServices"
 import { useState } from "react"
+import "../styles/updateprojectform.css"
 
 
 const UpdateProjectBtn = ( { post } ) => {
@@ -25,15 +26,16 @@ const UpdateProjectBtn = ( { post } ) => {
 
 
     return (
-        <div>
+        <div className="update-form">
             {update ?
-            <form onSubmit={handleSubmit}>
-                <input name='title' type='text' placeholder='Edit title Here' onChange={handleChange} value={formValues.title}></input>
-                <input name='body' type='text' placeholder='Edit Body Here' onChange={handleChange} value={formValues.body} ></input>
-                <input name='image' type='text' placeholder='Enter Image Source Here' onChange={handleChange} value={formValues.image}></input>
+            <form className="col" onSubmit={handleSubmit}>
+                <input className="create-update" name='title' type='text' placeholder='Title Here' onChange={handleChange} value={formValues.title}></input>
+                <input className="create-update" name='body' type='text' placeholder='Body Text' onChange={handleChange} value={formValues.body} ></input>
+                <input className="create-update" name='image' type='text' placeholder='Image Link' onChange={handleChange} value={formValues.image}></input>
                 <button className="submit-button" type='submit'>Update</button>
+                <button className='close-update-button' onClick={() => setUpdate(false)}>&times;</button>
             </form> : 
-                <button className='update-button' onClick={() => setUpdate(true)}>Edit this project</button>}
+                <button className='update-button' onClick={() => setUpdate(true)}>Edit Your Project</button>}
         </div>
     )
 }
