@@ -14,6 +14,7 @@
 
 .card {
     display: flexbox;
+    width: 40vw;
     align-content: space-around;
     margin: 10px 40px 50px 40px;
     padding: 15px 20px 30px 20px;
@@ -21,24 +22,25 @@
     border-radius: 15px;
 }
 
-h3 {
+.postTitle {
     display: flex;
     justify-content: flex-start;
     margin: 15px;
 }
 
-img {
+#postImage {
     max-width: 500px;
     max-height: 300px;
     box-shadow:8px 9px rgba(0, 0, 0, 0.3);
 }
 
-p {
+.postbody {
     max-width: 500px;
     padding-top: 15px;
+
 }
 
-button {
+/* button {
     padding: 5px;
     margin-top: 20px;
-}
+} */

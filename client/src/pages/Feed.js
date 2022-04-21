@@ -34,10 +34,10 @@ const Feed = ( {user, authenticated } ) => {
                 {projects.map((post) => (
                     <div className='card' key={post.id}>
                         <Link to={`/posts/${post._id}`}> 
-                        <h3>{post.title}</h3>
+                        <h3 className='postTitle'>{post.title}</h3>
                         <div> 
-                            <img src={post.image} alt='post' />
-                            <p> {post.body}</p>
+                            <img id='postImage'  src={post.image} alt='post' />
+                            <p className='postbody' > {post.body}</p>
                         </div>
                         </Link >
                 </div>

@@ -27,6 +27,10 @@
     animation-timing-function: ease-in-out;
 }
 
+.landing-content {
+    justify-content: center;
+}
+
 @keyframes slide-in {
     0% {
         left: -300px;
