@@ -58,6 +58,8 @@ const SignIn = (props) => {
             <button className='login_signin' disabled={!formValues.email || !formValues.password}>
               Sign In
             </button>
+
+            
             <p className='signin-intro'>Don’t have an account? <a href="/register"><strong style={{ color:'#5E3DD3'}}>Sign up now!</strong></a></p>
           </form>
           <div className='counter'></div>

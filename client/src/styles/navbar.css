@@ -7,15 +7,31 @@ header {
     font-size: 14px;
     max-height: 4em;
     display: flex;
-    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
     width: 100%;
     text-decoration: none;
 }
 
+.creatpostbtn {
+  margin-top: 0;
+  width: 180px;
+  height: 45px;
+  border: none;
+  background-color: #5E3DD3;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.creatpostbtn:hover {
+  background-color: #5D54A4;
+}
 
 .logo,
 .logo-wrapper {
-  flex: 50%;
+  flex: 20%;
   display: flex;
   justify-content: right;
   padding-left: 50px;
@@ -23,10 +39,14 @@ header {
   font-size: 32px;
 }
 
+.credit-page {
+  justify-content: right;
+}
+
 nav {
-    flex: 50%;
+    flex: 80%;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     padding-right: 50px;
     align-items: center;
 }
@@ -39,44 +59,74 @@ nav h3 {
   color: #fff;
   padding: 5px 10px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
 }
 nav a:hover{
     text-decoration: line-through;
 }
 
-  main {
+.rightside .hidden-menu {
+  display: none;
+}
+
+main {
     min-height: calc(100vh - 4em);
   }
 
-  .signup {
+.signup {
     color: #fff !important;
     background-color: #5D54A4;
     border-radius: 10px;
     border: 1px solid #5D54A4;
     padding: .75em 1.5em;
   }
-  .signup:hover {
+.signup:hover {
     border: 1px solid #5D54A4;
     background-color: #5D54A4;
     color: #FFF !important;
   }
     
-  .signin {
+.signin {
     color: #fff !important;
     background-color: #5D54A4;
     border-radius: 10px;
     border: 1px solid #5D54A4;
     padding: .75em 1.5em;
   }
-  .signin:hover {
+.signin:hover {
     border: 1px solid #5D54A4;
     background-color: #5D54A4;
     color: #FFF !important;
   } 
 
 
-  @media only screen and (max-width: 600px) {
+
+  @media only screen and (max-width: 880px) {
+    nav a,
+    nav h3 {
+      margin: auto .3em;
+      font-size: 14px;
+    }
+    .creatpostbtn {
+      font-size: 12px;
+      font-weight: 800;
+    }
+    nav a,
+    nav h3 {
+      margin: auto .3em;
+      padding: 5px 5px;
+      font-size: 14px;
+    }
+    .creatpostbtn {
+      width: 150px;
+      height: 40px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+  }
+
+
+  @media only screen and (max-width: 716px) {
     .signin {
         color: #fff !important;
         background-color: #5D54A4;
@@ -84,7 +134,26 @@ nav a:hover{
         border: 1px solid #5D54A4;
         padding: .5em 1em;
       }
-      .signup{
+    .signup{
         padding: .5em 1em;
       }
-  }
+    .logo,
+    .logo-wrapper {
+        font-size: 24px;
+      }
+      .rightsideLink {
+        display: none;
+      }
+    .rightside .hidden-menu {
+        display: flex;
+        padding: 35px 25px;
+        background-color: hsla(38, 22%, 90%, 0);
+        background-image: url('../assets/MenuBarImage/burger.png');
+        background-repeat: no-repeat, repeat;
+        background-position: center; /* Center the image */
+        background-size: contain;
+        border: none;
+        border-radius: 5px;
+        margin-top: 0;
+      }
+}

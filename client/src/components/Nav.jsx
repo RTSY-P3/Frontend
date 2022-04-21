@@ -1,30 +1,33 @@
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
+import { useState } from "react";
 
 const Nav = ({ authenticated, user, handleLogOut }) => {
+
+  const [showLinks, setShowLinks] =useState(false)
 
   let authenticatedOptions;
   if (user) {
     authenticatedOptions = (
       <nav>
         <div className="creatpost">
-          <Link to="/createpost">Create A Post</Link>
+          <Link to="/createpost"><button className="creatpostbtn">Create A Post</button></Link>
         </div>
-        <div className="rightside">
-          <h3>Welcome {user.email}!</h3>
-          <Link to="/credits">Credits</Link>
-          <Link to="/feed">Feed</Link>
-          <Link to="/myprofile">My Profile</Link>
-          <Link onClick={handleLogOut} to="/">
+        <div className="rightside" id={showLinks ? 'hidden' : ''}>
+          <Link className="rightsideLink" to="/credits">Credits</Link>
+          <Link className="rightsideLink" to="/feed">Feed</Link>
+          <Link className="rightsideLink" to="/myprofile">My Profile</Link>
+          <Link className="rightsideLink" onClick={handleLogOut} to="/">
             Sign Out
           </Link>
+          <button className="hidden-menu" onClick={() => setShowLinks(!showLinks) }></button>
         </div>
       </nav>
     )
   }
 
   const publicOptions = (
-    <nav>
+    <nav className="credit-page">
       <Link to="/credits">Credits</Link>
     </nav>
   )

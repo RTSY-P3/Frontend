@@ -207,6 +207,9 @@
     .landing-rightside{
         margin-left: 0px;
     }
+    .counter {
+    display: none;
+    }
 }
 
 @media only screen and (max-width: 620px) {
@@ -236,6 +239,9 @@
     }
     .backto-Signin {
         margin-top: 0;
+    }
+    .counter {
+        display: none;
     }
 }
 
