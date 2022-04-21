@@ -5,6 +5,7 @@ import { GetComments } from '../services/PostServices'
 import DeleteProjectBtn from "../components/DeleteProjectBtn"
 import UpdateProjectBtn from "../components/UpdateProjectButton"
 import '../styles/App.css'
+import '../styles/myprofile.css'
 
 
 const MyProfile = ( {user, authenticated} ) => {
@@ -34,13 +35,13 @@ const MyProfile = ( {user, authenticated} ) => {
         <div className="my-profile">
              {projects.map((post) => ( (post.userId === user.id) ? (
                 <div className='card' key={post.id}>
-                    <h4>{post.title}</h4>
+                    <h1>{post.title}</h1>
                     <img src={post.image} alt='post' />
                     <p>{post.body}</p>
                     <DeleteProjectBtn id={post.id} />
                     <UpdateProjectBtn post={post} />
                     <div>
-                        <h3>Comments:</h3>
+                        <h5>Comments:</h5>
                         {comments.map((comment)=> (comment.userId === post.id) ? (
                             <div className="comments" key={comment.id}>
                                 <h3>{comment.body}</h3>
