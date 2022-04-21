@@ -25,19 +25,18 @@ const Feed = ( {user, authenticated } ) => {
         <div className='feed-page'>
             <div className='feed-body'>
                 <div className='feed-title'>
-                    <h1>Users Projects</h1>
-
-               {/* <Comment /> */}
-               </div>
+                    <h1 style={{backgroundColor: "rgba(0, 0, 0, 0.3)"}}>PROJECT FEED</h1>
+                    {/* <Comment /> */}
+                </div>
                 {projects.map((post) => (
                     <div className='card' key={post.id}>
                         <Link to={`/posts/${post._id}`}> 
                         <h3>{post.title}</h3>
                         <div> 
                             <img src={post.image} alt='post' />
+                            <p> {post.body}</p>
                         </div>
                         </Link >
-
                 </div>
              
                 ))}
