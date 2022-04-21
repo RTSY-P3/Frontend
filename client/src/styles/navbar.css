@@ -69,9 +69,6 @@ nav a:hover{
   display: none;
 }
 
-main {
-    min-height: calc(100vh - 4em);
-  }
 
 .signup {
     color: #fff !important;
@@ -128,10 +125,6 @@ main {
 
   @media only screen and (max-width: 716px) {
     .signin {
-        color: #fff !important;
-        background-color: #5D54A4;
-        border-radius: 10px;
-        border: 1px solid #5D54A4;
         padding: .5em 1em;
       }
     .signup{
@@ -141,19 +134,20 @@ main {
     .logo-wrapper {
         font-size: 24px;
       }
-      .rightsideLink {
+    .rightsideLink {
         display: none;
       }
     .rightside .hidden-menu {
         display: flex;
-        padding: 35px 25px;
+        padding: 15px 15px;
         background-color: hsla(38, 22%, 90%, 0);
         background-image: url('../assets/MenuBarImage/burger.png');
         background-repeat: no-repeat, repeat;
-        background-position: center; /* Center the image */
+        background-position: center;
         background-size: contain;
         border: none;
         border-radius: 5px;
         margin-top: 0;
       }
+    
 }
