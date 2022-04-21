@@ -20,7 +20,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
           <Link className="rightsideLink" onClick={handleLogOut} to="/">
             Sign Out
           </Link>
-          <button className="hidden-menu" onClick={() => setShowLinks(!showLinks) }></button>
+          <button className="hidden-menu" onClick={() => setShowLinks(showLinks) }></button>
         </div>
       </nav>
     )
