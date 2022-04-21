@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/credit.css'
+import Footer from '../components/Footer'
 
 const Credits = () => {
 
@@ -46,8 +47,8 @@ const Credits = () => {
                         <a href='https://www.linkedin.com/in/yusongshi/' target="_blank" rel="noreferrer"><div className='profile-image profile-4'></div></a>
                         <h4>Yusong</h4>
                 </div> 
-                   
                 </div>
+                <Footer />
             </div>
     )
 }

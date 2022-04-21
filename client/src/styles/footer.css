@@ -1,6 +1,14 @@
 .Footer {
     display: flex;
+    width: 100%;
     justify-content: center;
     flex-direction: row;
-    margin-bottom: 30px;
+    padding: 50px 0;
+}
+
+.Middle-footer {
+    position: absolute;
+    bottom: 50px;
+    font-size: 14px;
+    font-weight: 400;
 }

@@ -63,9 +63,7 @@ const App = () => {
           <Route path='/update' element={<UpdateProjectBtn setUser={setUser} toggleAuthenticated={toggleAuthenticated} />}/>
         </Routes>
        </main> 
-       <footer>
-         <Footer />
-       </footer>
+  
     </div>
   );
 }
