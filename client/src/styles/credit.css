@@ -28,17 +28,13 @@
     flex-direction: column;
     align-items: center;
 }
-.section-image {
+.section-image-image1  {
     width: 500px;
     height: 500px;
     margin-bottom: 20px;
     background-size: cover;
-}
-.image1 {
     background-image: url('../assets/LandingImage/Group\ photo.png');
 }
-
-
 
 .section-2 {
     display: flex;
