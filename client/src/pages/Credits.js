@@ -8,13 +8,13 @@ const Credits = () => {
         <div className='credits-page-container'>
             <div className='credit-page-hero'>
                 <div className='credit-left'>
-                    <h1 className='hero-h1'>The heart of the Developing Community</h1>
+                    <h1 className='hero-h1'>The Heart of the Developing Community</h1>
                     <p className='hero-p'>
-                    <strong>We’re on a mission to build the world’s best community for developer to share, grow, and get hired.</strong> (Actually, we are just building this website so we could pass this course, you can check the project by clicking this link 👉  <a style={{ color:'#5E3DD3', fontWeight:'600' }} href='https://github.com/RTSY-P3/Frontend' target="_blank" rel="noreferrer"> here</a>)
+                    <strong>We’re on a mission to build the world’s best community for developers to share, grow, and get hired.</strong> (Actually, we are building this website so we could pass a course, but you can learn all about our project by clicking this link 👉  <a style={{ color:'#5E3DD3', fontWeight:'600' }} href='https://github.com/RTSY-P3/Frontend' target="_blank" rel="noreferrer"> here</a>)
                     </p>
                 </div>
                 <div className='section-image'>
-                    <div className='section-image image1'></div>
+                    <div className='section-image-image1'></div>
                     <h6>Illustration by unDraw</h6>
                 </div>  
 
@@ -26,9 +26,9 @@ const Credits = () => {
             <div className='section-2'>
                 <div className='section-header'>
                     <h2 className='section-title'>
-                        Get to know us
+                        Get to know us!
                     </h2>
-                    <h3>Codr is a 100% remote team. We believe that if you follow us on social media we will be successful.</h3>
+                    <h3>Codr is a 100% remote team. We believe that you should follow our journeys through our social media.</h3>
                 </div>
                 <div className='profile-wrapper'></div>
                 <div className='profile'>
