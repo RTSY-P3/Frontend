@@ -63,9 +63,3 @@ export const UpdateProject = async (projectId, data) => {
     throw error
   }
 }
-
-  //parameters of function need to accept "projectId"
-  //need projectId and data to update project. 
-  //send data to server
-  //handle error (try catch)
-  //return res.data
