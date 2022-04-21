@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { GetProjects } from '../services/PostServices'
-
 import { useNavigate, Link } from 'react-router-dom'
 // import Comment from '../components/Comment'
 import '../styles/feed.css'
+import Footer from '../components/Footer'
 
 const Feed = ( {user, authenticated } ) => {
 
@@ -42,6 +42,9 @@ const Feed = ( {user, authenticated } ) => {
                 </div>
                 ))}
             </div>
+            <footer>
+                 <Footer />
+            </footer>
         </div>
     ) : (
         <div className="must-signin" 

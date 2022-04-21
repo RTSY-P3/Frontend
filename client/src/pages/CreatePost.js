@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CreateProject } from "../services/PostServices";
 import '../styles/createpost.css'
+import Footer from '../components/Footer'
 
 const CreatePost = ( {user, authenticated } ) => {
   let navigate = useNavigate();
@@ -74,6 +75,7 @@ const CreatePost = ( {user, authenticated } ) => {
         <button className='landingbutton' >Submit Post</button>
       </form>
     </div>
+    <Footer />
     </div>
   ): (
     <div className="must-signin" 

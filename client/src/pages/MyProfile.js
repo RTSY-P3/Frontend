@@ -5,7 +5,7 @@ import { GetComments } from '../services/PostServices'
 import DeleteProjectBtn from "../components/DeleteProjectBtn"
 import UpdateProjectBtn from "../components/UpdateProjectButton"
 import '../styles/App.css'
-
+import Footer from '../components/Footer'
 
 const MyProfile = ( {user, authenticated} ) => {
     const [projects, setProjects] = useState([])
@@ -49,6 +49,7 @@ const MyProfile = ( {user, authenticated} ) => {
                     </div>
                 </div> ) : <div></div>
              ))}
+             <Footer />
         </div>
     ) : (
         <div className="must-signin" 
@@ -59,6 +60,7 @@ const MyProfile = ( {user, authenticated} ) => {
             <button style={{ margin:'10px 0' }}className="landingbutton" onClick={() => navigate('/signin')}> Sign in</button>
             <button className="landingbuttonSignin" onClick={() => navigate('/')}>Back to Home</button>
         </div>
+        
     )
 }
 
