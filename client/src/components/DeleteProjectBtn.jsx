@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { DeleteProject } from "../services/PostServices"
-
+import "../styles/deleteprojectbtn.css"
 
 const DeletePostBtn = ( {id} ) => {
 
@@ -13,7 +13,7 @@ const DeletePostBtn = ( {id} ) => {
 
     return (
         <div>
-            <button onClick={handleDelete}>Destroy this post</button>
+            <button className="delete-project-btn" onClick={handleDelete}>Delete Project</button>
         </div>
     ) 
 }

@@ -53,6 +53,7 @@ export const DeleteProject = async (projectId) => {
   } catch (error) {
     throw error
   }
+
 }
 
 export const UpdateProject = async (projectId, data) => {
@@ -62,4 +63,5 @@ export const UpdateProject = async (projectId, data) => {
   } catch (error) {
     throw error
   }
+
 }
