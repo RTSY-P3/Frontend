@@ -12,15 +12,11 @@
     margin: 100px 100px 100px 100px;
 }
 
-.feed-title {
-    background-color: transparent;
-}
-
 .card {
     display: flexbox;
     align-content: space-around;
     margin: 10px 40px 50px 40px;
-    padding: 15px 20px 40px 20px;
+    padding: 15px 20px 30px 20px;
     /* background: rgba(0, 0, 0, 0.4); */
     border-radius: 15px;
 }
@@ -35,6 +31,11 @@ img {
     max-width: 500px;
     max-height: 300px;
     box-shadow:8px 9px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    max-width: 500px;
+    padding-top: 15px;
 }
 
 button {
