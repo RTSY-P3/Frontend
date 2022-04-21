@@ -14,16 +14,16 @@ const UpdateProjectBtn = ( { post } ) => {
             image: "",
         })
 
-        const handleChange = (e) => {
+    const handleChange = (e) => {
             setFormValues({ ...formValues, [e.target.name]: e.target.value });
         }
-        const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
             e.preventDefault();
             await UpdateProject(post.id, formValues);
             navigate("/myprofile");
         }
 
-
+        
     return (
         <div>
             {update ?
