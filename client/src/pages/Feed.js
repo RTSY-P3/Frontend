@@ -25,24 +25,25 @@ const Feed = ( {user, authenticated } ) => {
 
     return (user && authenticated) ? (
         <div className='feed-page'>
-            <div className='feed-body'>
                 <div className='feed-title'>
+                    <h1 style={{backgroundColor: "rgba(0, 0, 0, 0)"}}>PROJECT FEED</h1>
+                </div>
 
-                    <h1 style={{backgroundColor: "rgba(0, 0, 0, 0.3)"}}>PROJECT FEED</h1>
-                    {/* <Comment /> */}
-                </div>
+                <div className='feed-wrapper'>
                 {projects.map((post) => (
-                    <div className='card' key={post.id}>
-                        <Link to={`/posts/${post._id}`}> 
-                        <h3 className='postTitle'>{post.title}</h3>
-                        <div> 
-                            <img id='postImage'  src={post.image} alt='post' />
-                            <p className='postbody' > {post.body}</p>
+                    <div className='feed-content' key={post.id}>
+                        {/* <Link to={`/posts/${post._id}`}>  */}
+                        <div className='feed-image'>
+                            <img id="project-poster" src={post.image} alt='post' />
                         </div>
-                        </Link >
-                </div>
+                        <div className='feed-intro'>
+                            <h3 id='feed-tile' >{post.title}</h3>
+                            <p id='feed-body' > {post.body}</p>
+                        </div>
+                        {/* </Link > */}
+                    </div>
                 ))}
-            </div>
+                </div>
             <footer>
                  <Footer />
             </footer>
