@@ -37,7 +37,7 @@ const MyProfile = ( {user, authenticated} ) => {
              {projects.map((post) => ( (post.userId === user.id) ? (
                 <div className='card' key={post.id}>
                     <h1>{post.title}</h1>
-                    <img src={post.image} alt='post' />
+                    <img id="project-poster" src={post.image} alt='post' />
                     <p>{post.body}</p>
                     <DeleteProjectBtn id={post.id} />
                     <UpdateProjectBtn post={post} />
