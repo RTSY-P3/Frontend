@@ -43,10 +43,11 @@ header {
   justify-content: right;
 }
 
+
 nav {
     flex: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding-right: 50px;
     align-items: center;
 }
@@ -65,13 +66,15 @@ nav a:hover{
     text-decoration: line-through;
 }
 
-.rightside .hidden-menu {
+
+.hidden-menu button {
   display: none;
 }
 
-main {
-    min-height: calc(100vh - 4em);
-  }
+nav .rightside {
+  justify-content: flex-end;    
+}
+
 
 .signup {
     color: #fff !important;
@@ -125,13 +128,9 @@ main {
     }
   }
 
-
+ 
   @media only screen and (max-width: 716px) {
     .signin {
-        color: #fff !important;
-        background-color: #5D54A4;
-        border-radius: 10px;
-        border: 1px solid #5D54A4;
         padding: .5em 1em;
       }
     .signup{
@@ -141,19 +140,49 @@ main {
     .logo-wrapper {
         font-size: 24px;
       }
-      .rightsideLink {
+    .rightside {
         display: none;
       }
-    .rightside .hidden-menu {
+    .creatpostbtn {
+        margin-right: 100px;
+      }
+   .hidden-menu button {
         display: flex;
-        padding: 35px 25px;
+        position: absolute;
+        right: 50px;
+        top: 40px;
+        padding: 15px 15px;
         background-color: hsla(38, 22%, 90%, 0);
         background-image: url('../assets/MenuBarImage/burger.png');
         background-repeat: no-repeat, repeat;
-        background-position: center; /* Center the image */
+        background-position: center;
         background-size: contain;
         border: none;
         border-radius: 5px;
         margin-top: 0;
       }
+     #hidden {
+      position: absolute;
+      /* padding: 8em; */
+      right: 0;
+      top: 0;
+      height: 100vh;
+      background: linear-gradient(115deg, #131314, #000000) ;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rightsideLink {
+      color:#fff;
+      background-color: rgb(0, 0, 0, 0);
+      margin: 20px auto;
+      text-align: center;
+      font-size: 24px;
+    }
+    nav .rightside {
+      justify-content: center;
+    }
+
+
 }
