@@ -13,6 +13,7 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
         <div className="creatpost">
           <Link to="/createpost"><button className="creatpostbtn">Create A Post</button></Link>
         </div>
+
         <div className="rightside" id={showLinks ? 'hidden' : ''}>
           <Link className="rightsideLink" to="/credits">Credits</Link>
           <Link className="rightsideLink" to="/feed">Feed</Link>
@@ -20,7 +21,10 @@ const Nav = ({ authenticated, user, handleLogOut }) => {
           <Link className="rightsideLink" onClick={handleLogOut} to="/">
             Sign Out
           </Link>
-          <button className="hidden-menu" onClick={() => setShowLinks(showLinks) }></button>
+        </div>
+
+        <div className="hidden-menu">
+          <button onClick={() => setShowLinks(!showLinks) }></button>
         </div>
       </nav>
     )

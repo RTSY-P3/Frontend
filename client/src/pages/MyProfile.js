@@ -30,7 +30,7 @@ const MyProfile = ( {user, authenticated} ) => {
     }, [])
 
     // console.log(projects[0].Comments)
-
+    console.log(projects[0])
     return (user && authenticated) ? (
         <div className="my-profile">
              {projects.map((post) => ( (post.userId === user.id) ? (
@@ -42,7 +42,7 @@ const MyProfile = ( {user, authenticated} ) => {
                     <UpdateProjectBtn post={post} />
                     <div>
                         <h5>Comments:</h5>
-                        {comments.map((comment)=> (comment.userId === user.id) ? (
+                        {comments.map((comment)=> (comment.userId === post.id) ? (
                             <div className="comments" key={comment.id}>
                                 <h3>{comment.body}</h3>
                             </div>

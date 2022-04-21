@@ -9,6 +9,8 @@ const Feed = ( {user, authenticated } ) => {
 
     const [projects, setProjects] = useState([])
 
+    // const [comments, setComments] = useState([])
+
     let navigate = useNavigate()
   
     useEffect(() => {
@@ -16,16 +18,16 @@ const Feed = ( {user, authenticated } ) => {
             const data = await GetProjects()
             setProjects(data)
         }
+
         handleProject()
         // handleComments()
     }, [])
-
 
     return (user && authenticated) ? (
         <div className='feed-page'>
             <div className='feed-body'>
                 <div className='feed-title'>
-                    <h1>Users Projects</h1>
+                    <h1 style={{backgroundColor: "rgba(0, 0, 0, 0)"}}>Users Projects</h1>
 
                {/* <Comment /> */}
                </div>
@@ -37,9 +39,7 @@ const Feed = ( {user, authenticated } ) => {
                             <img src={post.image} alt='post' />
                         </div>
                         </Link >
-
                 </div>
-             
                 ))}
             </div>
         </div>
