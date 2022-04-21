@@ -119,10 +119,28 @@
 
 #Project {
     font-size: 72px;
-    background: linear-gradient(0.25turn, #5E3DD3, #D085F0, #f69d3c);
+    background: linear-gradient(45deg, #5E3DD3, #D085F0, #f69d3c, #5E3DD3);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    background-size: 500%;
+    background-position: 100%;
+    animation: animatedText 4s ease-in infinite ;
 }
+
+@keyframes animatedText {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+
 
 /* .counter{
     width: 100px;

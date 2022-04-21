@@ -10,9 +10,9 @@ const UpdateProjectBtn = ( { post } ) => {
     const [update, setUpdate] = useState(false);
     const [formValues, setFormValues] = useState(
         {
-            title: "",
-            body: "",
-            image: "",
+            title: post.title,
+            body: post.body,
+            image: post.image,
         })
 
     const handleChange = (e) => {
@@ -22,6 +22,7 @@ const UpdateProjectBtn = ( { post } ) => {
             e.preventDefault();
             await UpdateProject(post.id, formValues);
             navigate("/myprofile");
+            window.location.reload()
         }
 
         
