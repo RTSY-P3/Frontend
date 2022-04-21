@@ -5,7 +5,7 @@ import { GetComments } from '../services/PostServices'
 import DeleteProjectBtn from "../components/DeleteProjectBtn"
 import UpdateProjectBtn from "../components/UpdateProjectBtn"
 import '../styles/App.css'
-import UpdateProjectBtn from "../components/UpdateProjectButton"
+
 
 const MyProfile = ( {user, authenticated} ) => {
     const [projects, setProjects] = useState([])
