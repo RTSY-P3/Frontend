@@ -3,8 +3,9 @@ import { GetProjects } from '../services/PostServices'
 import { useNavigate } from 'react-router-dom'
 import { GetComments } from '../services/PostServices'
 import DeleteProjectBtn from "../components/DeleteProjectBtn"
+import UpdateProjectBtn from "../components/UpdateProjectBtn"
 import '../styles/App.css'
-import UpdateProjectBtn from "../components/UpdateProjectButton"
+
 
 const MyProfile = ( {user, authenticated} ) => {
     const [projects, setProjects] = useState([])
@@ -38,6 +39,7 @@ const MyProfile = ( {user, authenticated} ) => {
                     <p>{post.body}</p>
                     <DeleteProjectBtn id={post.id} />
                     <UpdateProjectBtn post={post} />
+
                     <div>
                         <h3>Comments:</h3>
                         {comments.map((comment)=> (comment.userId === user.id) ? (
