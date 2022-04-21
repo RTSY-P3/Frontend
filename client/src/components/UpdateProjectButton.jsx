@@ -19,7 +19,7 @@ const UpdateProjectBtn = ( { post } ) => {
         }
         const handleSubmit = async (e) => {
             e.preventDefault();
-            await UpdateProject(post.id);
+            await UpdateProject(post.id, formValues);
             navigate("/myprofile");
         }
 
