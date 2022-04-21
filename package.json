@@ -4,5 +4,24 @@
     "bootstrap": "^5.1.3",
     "react-bootstrap": "^2.2.3",
     "react-router-dom": "^6.3.0"
-  }
+  },
+  "name": "frontend",
+  "description": "#### Group 3 Project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RTSY-P3/Frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RTSY-P3/Frontend/issues"
+  },
+  "homepage": "https://github.com/RTSY-P3/Frontend#readme"
 }

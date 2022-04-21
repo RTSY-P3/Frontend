@@ -5,6 +5,7 @@ import { GetComments } from '../services/PostServices'
 import DeleteProjectBtn from "../components/DeleteProjectBtn"
 import UpdateProjectBtn from "../components/UpdateProjectBtn"
 import '../styles/App.css'
+import UpdateProjectBtn from "../components/UpdateProjectButton"
 
 const MyProfile = ( {user, authenticated} ) => {
     const [projects, setProjects] = useState([])
@@ -37,7 +38,8 @@ const MyProfile = ( {user, authenticated} ) => {
                     <img src={post.image} alt='post' />
                     <p>{post.body}</p>
                     <DeleteProjectBtn id={post.id} />
-                    <UpdateProjectBtn body={post.body} title={post.title} image={post.image} />
+                    <UpdateProjectBtn title={post.title} body={post.body} image={post.image} />
+
                     <div>
                         <h3>Comments:</h3>
                         {comments.map((comment)=> (comment.userId === user.id) ? (
@@ -54,7 +56,7 @@ const MyProfile = ( {user, authenticated} ) => {
     style={{ display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'200px'}}>
         <h3 
         style={{  fontSize:'36px' }}className="signin-header">
-            Oops, we fucked up sorry!!💩 </h3>
+            Ya gotta login to do that, Bub 💩 </h3>
             <button style={{ margin:'10px 0' }}className="landingbutton" onClick={() => navigate('/signin')}> Sign in</button>
             <button className="landingbuttonSignin" onClick={() => navigate('/')}>Back to Home</button>
         </div>
