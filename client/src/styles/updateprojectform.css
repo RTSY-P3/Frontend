@@ -16,8 +16,28 @@
     margin-bottom: 20px;
     color: #000;
 }
+.create-update-title {
+    margin-top: 40px;
+    display: flex;
+    width: 300px;
+    height:60px;
+    border: 0;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+    color: #000;
+}
 
 .col {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    z-index: 999;
+    background-color: #131314;
+    width: 500px;
+    max-width: 80%;
     color:black;
 }
 .col textarea {
@@ -26,7 +46,8 @@
 
 .update-button {
     margin-top: 0;
-    width: 140px;
+    margin-left: 10px;
+    width: 150px;
     height: 45px;
     border: none;
     background-color: #7970bd;
@@ -59,7 +80,10 @@
 }
 
 .close-update-button {
+    position: absolute;
+    right: 20px;
     margin-top: 0;
+    margin-bottom: 10px;
     width: 45px;
     height: 45px;
     border: none;
