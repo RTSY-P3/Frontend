@@ -9,6 +9,7 @@ const DeletePostBtn = ( {id} ) => {
     const handleDelete = async () => {
         await DeleteProject(id)
         navigate('/myprofile')
+        window.location.reload()
     }
 
     return (
