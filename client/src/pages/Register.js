@@ -41,7 +41,7 @@ const Register = () => {
             <h3 className='register-description'>START FOR FREE</h3>
             <h1 className='register-header'>Sign up to Codr.</h1>
           </div>
-        <form className="col" onSubmit={handleSubmit}>
+        <form className="col-2" onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label className="name">Name</label>
             <input
