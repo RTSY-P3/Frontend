@@ -29,7 +29,7 @@ const UpdateProjectBtn = ( { post } ) => {
     return (
         <div className="update-form">
             {update ?
-            <form className="col" onSubmit={handleSubmit}>
+            <form className="col-2" onSubmit={handleSubmit}>
                 <div className="update-close-button">
                     <button className='close-update-button' onClick={() => setUpdate(false)}>&times;</button>
                 </div>

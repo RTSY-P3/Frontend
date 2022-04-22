@@ -27,7 +27,7 @@
     color: #000;
 }
 
-.col {
+.col-2 {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -40,7 +40,7 @@
     max-width: 80%;
     color:black;
 }
-.col textarea {
+.col-2 textarea {
     min-height: 120px;
 }
 
