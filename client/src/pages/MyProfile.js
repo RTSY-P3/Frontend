@@ -33,26 +33,44 @@ const MyProfile = ( {user, authenticated} ) => {
     // console.log(projects[0].Comments)
     console.log(projects[0])
     return (user && authenticated) ? (
-        <div className="my-profile">
+       <>
+        <div className="thumbnail-bg"></div>
+        <div className="user">
+            <div className="user-profile"></div>
+            <div className="user-stats">
+                <div className="userName">
+                    <p>John Wick</p>
+                </div>
+                <div className="userFollowers">
+                    <p>Projects <strong>8</strong></p>
+                    <p>Followers <strong>3,254,546</strong></p>
+                    <p>Following <strong>3</strong></p>
+                </div>
+            </div>
+        </div>
+        <div className="myProfile">
              {projects.map((post) => ( (post.userId === user.id) ? (
                 <div className='card' key={post.id}>
-                    <h1>{post.title}</h1>
-                    <img id="project-poster" src={post.image} alt='post' />
-                    <p>{post.body}</p>
-                    <DeleteProjectBtn id={post.id} />
-                    <UpdateProjectBtn post={post} />
-                    <div>
-                        <h5>Comments:</h5>
-                        {comments.map((comment)=> (comment.userId === post.id) ? (
-                            <div className="comments" key={comment.id}>
-                                <h3>{comment.body}</h3>
+                    <div className="project-poster-wrapper">
+                             <img id="myProject-poster" src={post.image} alt='post' />
+                        <div className="ctaProfile">
+                            <div className="ctaDelete"> 
+                                <DeleteProjectBtn id={post.id} />
+                            </div> 
+                            <div className="ctaUpdate"> 
+                                <UpdateProjectBtn post={post} />
                             </div>
-                        ) : <div></div>)}
+                        </div> 
+                    </div>
+                    <div className="myProject-content">
+                        <h1 id="projectTitle">{post.title}</h1>
+                        <p id="projectBody">{post.body}</p>
                     </div>
                 </div> ) : <div></div>
              ))}
              <Footer />
         </div>
+        </>
     ) : (
         <div className="must-signin" 
     style={{ display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', marginTop:'200px'}}>

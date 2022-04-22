@@ -1,9 +1,9 @@
 .delete-project-btn {
     margin-top: 0;
-    width: 180px;
+    width: 140px;
     height: 45px;
     border: none;
-    background-color: #5E3DD3;
+    background-color: #7970bd;
     border-radius: 50px;
     font-size: 14px;
     font-weight: 700;
@@ -11,5 +11,5 @@
     margin-top: 10px;
 }
 .delete-project-btn:hover {
-    background-color: #5D54A4;
+    background-color: #5E3DD3;
 }

@@ -6,9 +6,6 @@
     margin-top: 10px;
 }
 
-.col {
-    margin-top: 0px;
-}
 
 .create-update {
     display: flex;
@@ -16,22 +13,32 @@
     height:60px;
     border: 0;
     border-bottom: 1px solid white;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.col {
+    color:black;
+}
+.col textarea {
+    min-height: 120px;
 }
 
 .update-button {
     margin-top: 0;
-    width: 180px;
+    width: 140px;
     height: 45px;
     border: none;
-    background-color: #5E3DD3;
+    background-color: #7970bd;
     border-radius: 50px;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+
+    
 }
 .update-button:hover {
-    background-color: #5D54A4;
+    background-color: #5E3DD3;
 }
 
 .submit-button {
@@ -44,6 +51,8 @@
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-right: 10px;
 }
 .submit-button:hover {
     background-color: #5D54A4;
@@ -51,10 +60,10 @@
 
 .close-update-button {
     margin-top: 0;
-    margin-left: 10px;
     width: 45px;
     height: 45px;
     border: none;
+    margin-top: 10px;
     background-color: #5E3DD3;
     border-radius: 50px;
     font-size: 14px;
@@ -65,3 +74,4 @@
 .close-update-button:hover {
     background-color: #5D54A4;
 }
+
