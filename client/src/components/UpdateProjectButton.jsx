@@ -30,11 +30,13 @@ const UpdateProjectBtn = ( { post } ) => {
         <div className="update-form">
             {update ?
             <form className="col" onSubmit={handleSubmit}>
+                <div className="update-close-button">
+                    <button className="submit-button" type='submit'>Update</button>
+                    <button className='close-update-button' onClick={() => setUpdate(false)}>&times;</button>
+                </div>
                 <input className="create-update" name='title' type='text' placeholder='Title Here' onChange={handleChange} value={formValues.title}></input>
-                <input className="create-update" name='body' type='text' placeholder='Body Text' onChange={handleChange} value={formValues.body} ></input>
+                <textarea className="create-update" name='body' type='text' placeholder='Body Text' onChange={handleChange} value={formValues.body} ></textarea>
                 <input className="create-update" name='image' type='text' placeholder='Image Link' onChange={handleChange} value={formValues.image}></input>
-                <button className="submit-button" type='submit'>Update</button>
-                <button className='close-update-button' onClick={() => setUpdate(false)}>&times;</button>
             </form> : 
                 <button className='update-button' onClick={() => setUpdate(true)}>Edit Your Project</button>}
         </div>

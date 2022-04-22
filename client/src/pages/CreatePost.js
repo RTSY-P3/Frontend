@@ -32,12 +32,12 @@ const CreatePost = ( {user, authenticated } ) => {
   return (user && authenticated) ? (
     <div className="createpost">
       <div className="createpost_content">
-        <h3 className='create-post'>What are you working on?</h3>
+        <h3>What are you working on?</h3>
       </div>
       <div>
       <form className="col" onSubmit={handleSubmit}>
         <div className="create-wrapper">
-          <label className="creat-lable">Let’s begin with the name</label>
+          <label>Let’s begin with the name</label>
           <input
           className="create-input"
             onChange={handleChange}
@@ -49,7 +49,7 @@ const CreatePost = ( {user, authenticated } ) => {
           />
         </div>
         <div className="create-wrapper">
-        <label className="creat-lable">Next, set the thumbnail photos</label>
+        <label>Next, set the thumbnail photos</label>
         <input
           className="create-input"
             onChange={handleChange}
@@ -61,18 +61,18 @@ const CreatePost = ( {user, authenticated } ) => {
           />
         </div>
         <div className="create-wrapper">
-        <label className="creat-lable">Tell everyone about your project</label>
-          <input
-          className="create-input"
+        <label id="lable-3">Tell everyone about your project</label>
+          <textarea
+          className="create-input-textarea"
             onChange={handleChange}
             name="body"
             type="textarea"
-            placeholder="Project Details"
+            placeholder="Project Details(255 words limited)"
             value={formValues.body}
             required
           />
         </div>
-        <button className='landingbutton' >Submit Post</button>
+        <button className='postButton' >Post My Project</button>
       </form>
     </div>
     <Footer />
