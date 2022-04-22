@@ -35,7 +35,7 @@ const CreatePost = ( {user, authenticated } ) => {
         <h3>What are you working on?</h3>
       </div>
       <div>
-      <form className="col" onSubmit={handleSubmit}>
+      <form className="col-1" onSubmit={handleSubmit}>
         <div className="create-wrapper">
           <label>Let’s begin with the name</label>
           <input
